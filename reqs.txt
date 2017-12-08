@@ -1,0 +1,17 @@
+certifi==2017.4.17
+chardet==3.0.4
+dj-database-url==0.4.2
+Django==1.11.2
+django-cors-headers==2.1.0
+djangorestframework==3.6.3
+gunicorn==19.7.1
+idna==2.5
+passlib==1.7.1
+psycopg2==2.7.1
+python-env==1.0.0
+python-http-client==2.4.0
+pytz==2017.2
+requests==2.18.1
+sendgrid==4.2.0
+urllib3==1.21.1
+whitenoise==3.3.0
