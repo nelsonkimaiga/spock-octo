@@ -29,7 +29,7 @@ public class NewJobsService {
 	
 	/*get an employee by id*/
 	public NewJobs findOne(Integer id) {
-		return newJobsRepository.findOne(id);
+		return newJobsRepository.findById(id).orElse(null);
 	}
 	
 	
