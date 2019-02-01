@@ -12,7 +12,7 @@ import javax.persistence.Table;
 import org.hibernate.validator.constraints.NotEmpty;
 
 @Entity
-@Table(name = "create_profile")
+@Table(name = "hustlers_profile")
 public class CreateProfile {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
