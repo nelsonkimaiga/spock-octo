@@ -13,86 +13,88 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.example.jobonicafrika.model.NewJobs;
-import com.example.jobonicafrika.service.NewJobsService;
+import com.example.jobonicafrika.model.CreateProfile;
+import com.example.jobonicafrika.service.CreateProfileService;
 
 
 
 @Controller
 
-public class NewJobsController {
+public class CreateProfileController {
+	
 	
 	@Autowired
-	private NewJobsService NJS;
+	private CreateProfileService CPS;
 	
-	@RequestMapping(value="/jobos",method=RequestMethod.GET)
+	@RequestMapping(value="/newprofile",method=RequestMethod.GET)
 	public String newRegistration(ModelMap model) {
-		NewJobs newJobs = new NewJobs();
-		model.addAttribute("janta",newJobs);
-		return "jobos";
+		CreateProfile createprofile = new CreateProfile();
+		model.addAttribute("prof",createprofile);
+		return "newprofile";
 	}
 	
-	@RequestMapping(value="/save",method=RequestMethod.POST)
-	public String saveRegistration(@Valid NewJobs newJobs,BindingResult result,ModelMap model,RedirectAttributes redirectAttributes) {
+	@RequestMapping(value="/saveprofiles",method=RequestMethod.POST)
+	public String saveRegistration(@Valid CreateProfile createprofile,BindingResult result,ModelMap model,RedirectAttributes redirectAttributes) {
 		
 		if(result.hasErrors()) {
 			System.out.println("has errors");
-			return "jobos";
+			return "newprofile";
 		}
 	
-		NJS.save(newJobs);
+		CPS.save(createprofile);
 		
-		return "redirect:/viewjobos";
+		return "redirect:/viewprofiles";
 	}
 	
 	
-	@RequestMapping(value="/viewjobos")
+	@RequestMapping(value="/viewprofiles")
 	public ModelAndView getAll() {
 		
-		List<NewJobs> list=NJS.findAll();
-		return new ModelAndView("viewjobos","list",list);
+		List<CreateProfile> list=CPS.findAll();
+		return new ModelAndView("viewprofile","list",list);
 	}
 	
 	/*
-	@RequestMapping(value="/editstudent/{id}")
+	@RequestMapping(value="/editprofile/{id}")
 	public String edit (@PathVariable int id,ModelMap model) {
 		
-		NewJobs newJobs=NJS.findOne(id);
-		model.addAttribute("janta",newJobs);
-		return "editstudent";
+		CreateProfile createprofile=CPS.findOne(id);
+		model.addAttribute("prof",createprofile);
+		return "editprofile";
 	}
-	
 	*/
+	
 	////////////ngorireee
 	/*
 	@RequestMapping(value="/editsave",method=RequestMethod.POST)
-	public ModelAndView editsave(@ModelAttribute("janta") NewJobs p) {
+	public ModelAndView editsave(@ModelAttribute("prof") CreateProfile p) {
 		
-		NewJobs newJobs=NJS.findOne(p.getId());
+		CreateProfile createprofile=CPS.findOne(p.getId());
 		
-		newJobs.setFirstName(p.getFirstName());
-		newJobs.setLastName(p.getLastName());
-		newJobs.setCountry(p.getCountry());
-		newJobs.setEmail(p.getEmail());
-		newJobs.setSection(p.getSection());
-		newJobs.setSex(p.getSex());
+		createprofile.setFirstName(p.getFirstName());
+		createprofile.setLastName(p.getLastName());
+		createprofile.setCountry(p.getCountry());
+		createprofile.setEmail(p.getEmail());
+		createprofile.setSection(p.getSection());
+		createprofile.setSex(p.getSex());
 		
-		NJS.save(newJobs);
+		CPS.save(createprofile);
 		return new ModelAndView("redirect:/viewjobos");
 	}
 	
-	
-	*//*
-	
-	@RequestMapping(value="/deletestudent/{id}",method=RequestMethod.GET)
-	public ModelAndView delete(@PathVariable int id) {
-		NewJobs newJobs=NJS.findOne(id);
-		NJS.delete(newJobs);
-		return new ModelAndView("redirect:/viewjobos");
-	}
 	
 	*/
-/*
+	/*
+	
+	@RequestMapping(value="/deleteprofile/{id}",method=RequestMethod.GET)
+	public ModelAndView delete(@PathVariable int id) {
+		CreateProfile createprofile=CPS.findOne(id);
+		CPS.delete(createprofile);
+		return new ModelAndView("redirect:/viewjobos");
+	}
+	
+	
+
 	@ModelAttribute("sections")
 	public List<String> intializeSections(){
 		List<String> sections = new ArrayList<String>();
@@ -101,7 +103,7 @@ public class NewJobsController {
 		sections.add("Reasearch");
 		return sections;
 	}
-	*/
+	/*
 	
 	/*
 	 * Method used to populate the country list in view. Note that here you can

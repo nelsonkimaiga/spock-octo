@@ -24,8 +24,6 @@ public class NewJobs {
 	 * Post job q. Cancel r. Success true or false
 	 */
 
-	private static final long serialVersionUID = 1L;
-
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
