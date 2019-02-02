@@ -33,7 +33,7 @@
 		<table id="t01" border="2" width="70%" cellpadding="2">
 			<tr>
 
-				<th>JOB Id</th>
+		
 			
 				<th>CompanyName</th>
 				<th>PhoneNumber us</th>
@@ -50,16 +50,16 @@
 				
 				
 			</tr>
-			<tr th:each="company_profile: ${list}">
+			<tr th:each="company_account: ${list}">
 
-				<td th:text="${company_account.company_name}"></td>
+				<td th:text="${company_account.CompanyName}"></td>
 				<td th:text="${company_account.PhoneNumber}"></td>
 				<td th:text="${company_account.number_of_employees}"></td>
 				<td th:text="${company_account.CompanyURL}"></td>
 				<td th:text="${company_account.OrganisationType}"></td>
 				<td th:text="${company_account.PrimaryIndustry}"></td>
 				<td th:text="${company_account.Location}"></td>
-				<td th:text="${company_account.Date_established}"></td>
+				<td th:text="${company_account.DateEstablished}"></td>
 				<td th:text="${company_account.Headquarters}"></td>
 				<td th:text="${company_account.SocialMedia}"></td>
 				<td th:text="${company_account.Logo}"></td>
