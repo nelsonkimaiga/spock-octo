@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html>
+
+
+<!-- Mirrored from webapplayers.com/inspinia_admin-v2.3/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 10 Nov 2015 01:42:55 GMT -->
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Jobonics | Company</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <!-- Toastr style -->
+    <link href="css/plugins/toastr/toastr.min.css" rel="stylesheet">
+
+    <!-- Gritter -->
+    <link href="js/plugins/gritter/jquery.gritter.css" rel="stylesheet">
+
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div id="wrapper">
+        <nav class="navbar-default navbar-static-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav metismenu" id="side-menu">
+                    <li class="nav-header">
+                        <div class="dropdown profile-element"> <span>
+                            <img alt="image" class="img-circle" src="img/profile_small.jpg" />
+                             </span>
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">John Doe</strong>
+                             </span> <span class="text-muted text-xs block">HR Director <b class="caret"></b></span> </span> </a>
+                            <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                                <li><a href="profile.html">Profile</a></li>
+                                <li><a href="contacts.html">Contacts</a></li>
+                                <li><a href="mailbox.html">Mailbox</a></li>
+                                <li class="divider"></li>
+                                <li><a href="login.html">Logout</a></li>
+                            </ul>
+                        </div>
+                        <div class="logo-element">
+                            JOBONICS
+                        </div>
+                    </li>
+                    <li class="active">
+                        <a href="recruiter_dashboard.html"><i class="fa fa-th-large"></i> <span class="nav-label"> Recruiter Dashboard</span> <span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li><a href="recruiter_dashboard.html">Reporting</a></li>
+                            <li><a href="applications.html">Applications</a></li>
+                            <li><a href="new_job.html">New Job</a></li>
+                            <li><a href="openings.html">Openings</a></li>
+                            <li><a href="pipeline.html">Pipeline</a></li>
+                            <li><a href="calendar.html">Calendar</a></li>
+                            <li><a href="google_maps.html">Google maps</a></li>
+                            <li><a href="teams_board.html">Teams board</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="mailbox.html"><i class="fa fa-envelope"></i> <span class="nav-label">Mailbox </span><span class="label label-warning pull-right">16/24</span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="mailbox.html">Inbox</a></li>
+                            <li><a href="mail_detail.html">Drafts</a></li>
+                            <li><a href="mail_compose.html">Compose message</a></li>
+                        </ul>
+                    <li>
+                        <a href="#"><i class="fa fa-desktop"></i> <span class="nav-label">Candidates</span> </a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="contacts.html">Contacts</a></li>
+                            <li><a href="latest_jobs.html">Latest Jobs</a></li>
+                            <li><a href="profile_2.html">Profile</a></li>
+                            <li><a href="companies.html">View Companies</a></li>
+                            <li><a href="company_profile.html">Company Profile</a></li>
+                            <li><a href="social_feed.html">Social feed</a></li>
+                            <li><a href="timeline.html">Timeline</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-files-o"></i> <span class="nav-label">Jobonics Admin</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a href="admin_dashboard.html">Admin Dashboard</a></li>
+                            <li><a href="issue_tracker.html">Issue tracker</a></li>
+                            <li><a href="clients.html">Clients</a></li>
+                            <li><a href="faq.html">FAQ</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="article.html">Article</a></li>
+                            <li><a href="chat_view.html">Chat Bot</a></li>
+                            <li><a href="lockscreen.html">Lockscreen</a></li>
+                            <li><a href="makepayment.html">Credit Card form</a></li>
+                            <li><a href="invoice.html">Invoice</a></li>
+                            <li><a href="login.html">Login</a></li>
+                            <li><a href="forgot_password.html">Forget password</a></li>
+                            <li><a href="register.html">Register</a></li>
+                            <li><a href="404.html">404 Page</a></li>
+                            <li><a href="500.html">500 Page</a></li>
+                            <li><a href="empty_page.html">Empty page</a></li>
+                        </ul>
+                    </li>
+            </div>
+        </nav>
+
+                        
+        <div id="page-wrapper" class="gray-bg">
+        <div class="row border-bottom">
+        <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+        <div class="navbar-header">
+            <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+            <form role="search" class="navbar-form-custom" action="http://webapplayers.com/inspinia_admin-v2.3/search_results.html">
+                <div class="form-group">
+                    <input type="text" placeholder="Search for something..." class="form-control" name="top-search" id="top-search">
+                </div>
+            </form>
+        </div>
+            <ul class="nav navbar-top-links navbar-right">
+                <li>
+                    <span class="m-r-sm text-muted welcome-message">Welcome John!</span>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                        <i class="fa fa-envelope"></i>  <span class="label label-warning">16</span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-messages">
+                        <li>
+                            <div class="dropdown-messages-box">
+                                <a href="profile.html" class="pull-left">
+                                    <img alt="image" class="img-circle" src="img/a7.jpg">
+                                </a>
+                                <div class="media-body">
+                                    <small class="pull-right">46h ago</small>
+                                    <strong>Mike Loreipsum</strong> started following <strong>Monica Smith</strong>. <br>
+                                    <small class="text-muted">3 days ago at 7:58 pm - 10.06.2014</small>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <div class="dropdown-messages-box">
+                                <a href="profile.html" class="pull-left">
+                                    <img alt="image" class="img-circle" src="img/a4.jpg">
+                                </a>
+                                <div class="media-body ">
+                                    <small class="pull-right text-navy">5h ago</small>
+                                    <strong>Chris Johnatan Overtunk</strong> started following <strong>Monica Smith</strong>. <br>
+                                    <small class="text-muted">Yesterday 1:21 pm - 11.06.2014</small>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <div class="dropdown-messages-box">
+                                <a href="profile.html" class="pull-left">
+                                    <img alt="image" class="img-circle" src="img/profile.jpg">
+                                </a>
+                                <div class="media-body ">
+                                    <small class="pull-right">23h ago</small>
+                                    <strong>Monica Smith</strong> love <strong>Kim Smith</strong>. <br>
+                                    <small class="text-muted">2 days ago at 2:30 am - 11.06.2014</small>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <div class="text-center link-block">
+                                <a href="mailbox.html">
+                                    <i class="fa fa-envelope"></i> <strong>Read All Messages</strong>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                        <i class="fa fa-bell"></i>  <span class="label label-primary">8</span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-alerts">
+                        <li>
+                            <a href="mailbox.html">
+                                <div>
+                                    <i class="fa fa-envelope fa-fw"></i> You have 16 messages
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="profile.html">
+                                <div>
+                                    <i class="fa fa-twitter fa-fw"></i> 3 New Followers
+                                    <span class="pull-right text-muted small">12 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="grid_options.html">
+                                <div>
+                                    <i class="fa fa-upload fa-fw"></i> Server Rebooted
+                                    <span class="pull-right text-muted small">4 minutes ago</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <div class="text-center link-block">
+                                <a href="notifications.html">
+                                    <strong>See All Alerts</strong>
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+
+
+                <li>
+                    <a href="login.html">
+                        <i class="fa fa-sign-out"></i> Log out
+                    </a>
+                </li>
+            </ul>
+
+        </nav>
+        </div>
+            <div class="row wrapper border-bottom white-bg page-heading">
+                <div class="col-lg-10">
+                    <h2>Company Profile</h2>
+                    <ol class="breadcrumb">
+                        <li>
+                            <a href="index-2.html">Home</a>
+                        </li>
+                        <li>
+                            <a>Companies</a>
+                        </li>
+                        <li class="active">
+                            <strong>Meltwater Company</strong>
+                        </li>
+                    </ol>
+                </div>
+                <div class="col-lg-2">
+
+                </div>
+            </div>
+        <div class="wrapper wrapper-content animated fadeInRight">
+
+
+            <div class="row m-b-lg m-t-lg">
+                <div class="col-md-6">
+
+                    <div class="profile-image">
+                        <img src="img/b3.jpg" class="img-circle circle-border m-b-md" alt="profile">
+                    </div>
+                    <div class="profile-info">
+                        <div class="">
+                            <div>
+                                <h2 class="no-margins">
+                                    Meltwater Company
+                                </h2>
+                                <h4>Information Technology and Services</h4>
+                                <small>
+                                    HQ:  San fransisco, California
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <table class="table small m-b-xs">
+                        <tbody>
+                        <tr>
+                            <td>
+                                <strong>1424</strong> Employees
+                            </td>
+                            <td>
+                                <strong>22</strong> Followers
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>610</strong> Employees on Jobonics
+                            </td>
+                            <td>
+                                <strong>5</strong> Open Jobs
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <strong>154</strong> Reviews
+                            </td>
+                            <td>
+                                <strong>1982</strong> Established
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-md-3">
+                    <small>Followers in last year</small>
+                    <h2 class="no-margins">2,480</h2>
+                    <div id="sparkline1"></div>
+                </div>
+
+
+            </div>
+            <div class="row">
+
+                <div class="col-lg-3">
+
+                    <div class="ibox">
+                        <div class="ibox-content">
+                                <h3>About Meltwater</h3>
+
+                            <p class="small">
+                                We believe that business strategy will be increasingly shaped by insights from online data. Organizations will look outside, beyond their internal reporting systems to a world of data that is constantly growing and changing. Our customers use these insights to make timely decisions based on real-time analysis. 
+                                <br/>
+                                <br/>
+                                More than 25,000 companies use the Meltwater media intelligence platform to stay on top of billions of online conversations, extract relevant insights, and use them to strategically manage their brand and stay ahead of their competition. With more than 50 offices on six continents, Meltwater is dedicated to personal, global service built on local expertise. Meltwater also operates the Meltwater Entrepreneurial School of Technology (MEST), a nonprofit organization devoted to nurturing future generations of entrepreneurs. 
+
+                            </p>
+
+                            <p class="small font-bold">
+                                <span><i class="fa fa-circle text-navy"></i> Online status</span>
+                                </p>
+
+                        </div>
+                    </div>
+
+                    <div class="ibox">
+                        <div class="ibox-content">
+                            <h3>Employees</h3>
+                            <p class="small">
+                                600 Employees using Jobonics
+                            </p>
+                            <div class="user-friends">
+                                <a href="#"><img alt="image" class="img-circle" src="img/a3.jpg"></a>
+                                <a href="#"><img alt="image" class="img-circle" src="img/a1.jpg"></a>
+                                <a href="#"><img alt="image" class="img-circle" src="img/a2.jpg"></a>
+                                <a href="#"><img alt="image" class="img-circle" src="img/a4.jpg"></a>
+                                <a href="#"><img alt="image" class="img-circle" src="img/a5.jpg"></a>
+                                <a href="#"><img alt="image" class="img-circle" src="img/a6.jpg"></a>
+                                <a href="#"><img alt="image" class="img-circle" src="img/a7.jpg"></a>
+                                <a href="#"><img alt="image" class="img-circle" src="img/a8.jpg"></a>
+                                <a href="#"><img alt="image" class="img-circle" src="img/a2.jpg"></a>
+                                <a href="#"><img alt="image" class="img-circle" src="img/a1.jpg"></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ibox">
+                        <div class="ibox-content">
+                            <h3>Specialties</h3>
+                            <ul class="list-unstyled file-list">
+                                <li><a href="#"><i class="fa fa-file"></i> Online media Intelligence</a></li>
+                                <li><a href="#"><i class="fa fa-file-picture-o"></i> Social Media Marketing</a></li>
+                                <li><a href="#"><i class="fa fa-stack-exchange"></i> SaaS</a></li>
+                                <li><a href="#"><i class="fa fa-file"></i> Public Relations</a></li>
+                                <li><a href="#"><i class="fa fa-file-powerpoint-o"></i> Lorem Ipsum</a></li>
+                                <li><a href="#"><i class="fa fa-file"></i> Lorem Ipsum</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="ibox">
+                        <div class="ibox-content">
+                            <h3>Private message</h3>
+
+                            <p class="small">
+                                Send private message Meltwater Recruiting
+                            </p>
+
+                            <div class="form-group">
+                                <label>Subject</label>
+                                <input type="email" class="form-control" placeholder="Message subject">
+                            </div>
+                            <div class="form-group">
+                                <label>Message</label>
+                                <textarea class="form-control" placeholder="Your message" rows="3"></textarea>
+                            </div>
+                            <button class="btn btn-primary btn-block">Send</button>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-lg-5">
+
+                    <div class="social-feed-box">
+
+                        <div class="pull-right social-action dropdown">
+                            <button data-toggle="dropdown" class="dropdown-toggle btn-white">
+                                <i class="fa fa-angle-down"></i>
+                            </button>
+                            <ul class="dropdown-menu m-t-xs">
+                                <li><a href="#">Config</a></li>
+                            </ul>
+                        </div>
+                        <div class="social-avatar">
+                            <a href="#" class="pull-left">
+                                <img alt="image" src="img/a1.jpg">
+                            </a>
+                            <div class="media-body">
+                                <a href="#">
+                                    Andrew Williams
+                                </a>
+                                <small class="text-muted">Today 4:21 pm - 12.06.2014</small>
+                            </div>
+                        </div>
+                        <div class="social-body">
+                            <p>
+                                Many desktop publishing packages and web page editors now use Lorem Ipsum as their
+                                default model text, and a search for 'lorem ipsum' will uncover many web sites still
+                                in their infancy. Packages and web page editors now use Lorem Ipsum as their
+                                default model text.
+                            </p>
+
+                            <div class="btn-group">
+                                <button class="btn btn-white btn-xs"><i class="fa fa-thumbs-up"></i> Like this!</button>
+                                <button class="btn btn-white btn-xs"><i class="fa fa-comments"></i> Comment</button>
+                                <button class="btn btn-white btn-xs"><i class="fa fa-share"></i> Share</button>
+                            </div>
+                        </div>
+                        <div class="social-footer">
+                            <div class="social-comment">
+                                <a href="#" class="pull-left">
+                                    <img alt="image" src="img/a1.jpg">
+                                </a>
+                                <div class="media-body">
+                                    <a href="#">
+                                        Andrew Williams
+                                    </a>
+                                    Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words.
+                                    <br/>
+                                    <a href="#" class="small"><i class="fa fa-thumbs-up"></i> 26 Like this!</a> -
+                                    <small class="text-muted">12.06.2014</small>
+                                </div>
+                            </div>
+
+                            <div class="social-comment">
+                                <a href="#" class="pull-left">
+                                    <img alt="image" src="img/a2.jpg">
+                                </a>
+                                <div class="media-body">
+                                    <a href="#">
+                                        Andrew Williams
+                                    </a>
+                                    Making this the first true generator on the Internet. It uses a dictionary of.
+                                    <br/>
+                                    <a href="#" class="small"><i class="fa fa-thumbs-up"></i> 11 Like this!</a> -
+                                    <small class="text-muted">10.07.2014</small>
+                                </div>
+                            </div>
+
+                            <div class="social-comment">
+                                <a href="#" class="pull-left">
+                                    <img alt="image" src="img/a3.jpg">
+                                </a>
+                                <div class="media-body">
+                                    <textarea class="form-control" placeholder="Write comment..."></textarea>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="social-feed-box">
+
+                        <div class="pull-right social-action dropdown">
+                            <button data-toggle="dropdown" class="dropdown-toggle btn-white">
+                                <i class="fa fa-angle-down"></i>
+                            </button>
+                            <ul class="dropdown-menu m-t-xs">
+                                <li><a href="#">Config</a></li>
+                            </ul>
+                        </div>
+                        <div class="social-avatar">
+                            <a href="#" class="pull-left">
+                                <img alt="image" src="img/a6.jpg">
+                            </a>
+                            <div class="media-body">
+                                <a href="#">
+                                    Andrew Williams
+                                </a>
+                                <small class="text-muted">Today 4:21 pm - 12.06.2014</small>
+                            </div>
+                        </div>
+                        <div class="social-body">
+                            <p>
+                                Many desktop publishing packages and web page editors now use Lorem Ipsum as their
+                                default model text, and a search for 'lorem ipsum' will uncover many web sites still
+                                in their infancy. Packages and web page editors now use Lorem Ipsum as their
+                                default model text.
+                            </p>
+                            <p>
+                                Lorem Ipsum as their
+                                default model text, and a search for 'lorem ipsum' will uncover many web sites still
+                                in their infancy. Packages and web page editors now use Lorem Ipsum as their
+                                default model text.
+                            </p>
+                            <img src="img/gallery/3.jpg" class="img-responsive">
+                            <div class="btn-group">
+                                <button class="btn btn-white btn-xs"><i class="fa fa-thumbs-up"></i> Like this!</button>
+                                <button class="btn btn-white btn-xs"><i class="fa fa-comments"></i> Comment</button>
+                                <button class="btn btn-white btn-xs"><i class="fa fa-share"></i> Share</button>
+                            </div>
+                        </div>
+                        <div class="social-footer">
+                            <div class="social-comment">
+                                <a href="#" class="pull-left">
+                                    <img alt="image" src="img/a1.jpg">
+                                </a>
+                                <div class="media-body">
+                                    <a href="#">
+                                        Andrew Williams
+                                    </a>
+                                    Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words.
+                                    <br/>
+                                    <a href="#" class="small"><i class="fa fa-thumbs-up"></i> 26 Like this!</a> -
+                                    <small class="text-muted">12.06.2014</small>
+                                </div>
+                            </div>
+
+                            <div class="social-comment">
+                                <a href="#" class="pull-left">
+                                    <img alt="image" src="img/a2.jpg">
+                                </a>
+                                <div class="media-body">
+                                    <a href="#">
+                                        Andrew Williams
+                                    </a>
+                                    Making this the first true generator on the Internet. It uses a dictionary of.
+                                    <br/>
+                                    <a href="#" class="small"><i class="fa fa-thumbs-up"></i> 11 Like this!</a> -
+                                    <small class="text-muted">10.07.2014</small>
+                                </div>
+                            </div>
+
+                            <div class="social-comment">
+                                <a href="#" class="pull-left">
+                                    <img alt="image" src="img/a8.jpg">
+                                </a>
+                                <div class="media-body">
+                                    <a href="#">
+                                        Andrew Williams
+                                    </a>
+                                    Making this the first true generator on the Internet. It uses a dictionary of.
+                                    <br/>
+                                    <a href="#" class="small"><i class="fa fa-thumbs-up"></i> 11 Like this!</a> -
+                                    <small class="text-muted">10.07.2014</small>
+                                </div>
+                            </div>
+
+                            <div class="social-comment">
+                                <a href="#" class="pull-left">
+                                    <img alt="image" src="img/a3.jpg">
+                                </a>
+                                <div class="media-body">
+                                    <textarea class="form-control" placeholder="Write comment..."></textarea>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 m-b-lg">
+                    <div id="vertical-timeline" class="vertical-container light-timeline no-margins">
+                        <div class="vertical-timeline-block">
+                            <div class="vertical-timeline-icon navy-bg">
+                                <i class="fa fa-briefcase"></i>
+                            </div>
+
+                            <div class="vertical-timeline-content">
+                                <h2>Open Jobs</h2>
+                                <ul>
+                                    <li>Admin Assistant, Accra Ghana</li>
+                                    <li>Accountant, Berlin Germany</li>
+                                    <li>Developer, CapeTown, South Africa</li>
+                                </ul>
+                                <a href="latest_jobs.html" class="btn btn-sm btn-primary"> More jobs</a>
+                                    <span class="vertical-date">
+                                        Today <br>
+                                        <small>Dec 24</small>
+                                    </span>
+                            </div>
+                        </div>
+
+                        <div class="vertical-timeline-block">
+                            <div class="vertical-timeline-icon blue-bg">
+                                <i class="fa fa-file-text"></i>
+                            </div>
+
+                            <div class="vertical-timeline-content">
+                                <h2>Reviews</h2>
+                                <p>Pros:
+                            Wenn man sich kümmert, hat man beste Entwicklungschancen, das richtige Potential vorausgesetzt. Vorgesetztenabhängig gibt es auch ri...</p>
+                                <a href="#" class="btn btn-sm btn-success"> View All </a>
+                                    <span class="vertical-date">
+                                        Today <br>
+                                        <small>Dec 24</small>
+                                    </span>
+                            </div>
+                        </div>
+
+                        <div class="vertical-timeline-block">
+                            <div class="vertical-timeline-icon lazur-bg">
+                                <i class="fa fa-coffee"></i>
+                            </div>
+
+                            <div class="vertical-timeline-content">
+                                <h2>Media Mentions</h2>
+                                <p>Go to shop and find some products. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's. </p>
+                                <a href="#" class="btn btn-sm btn-info">Read more</a>
+                                <span class="vertical-date"> Yesterday <br><small>Dec 23</small></span>
+                            </div>
+                        </div>
+
+                        <div class="vertical-timeline-block">
+                            <div class="vertical-timeline-icon yellow-bg">
+                                <i class="fa fa-phone"></i>
+                            </div>
+
+                            <div class="vertical-timeline-content">
+                                <h2>Awards & Achievements</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>
+                                <span class="vertical-date">Yesterday <br><small>Dec 23</small></span>
+                            </div>
+                        </div>
+
+                        <div class="vertical-timeline-block">
+                            <div class="vertical-timeline-icon navy-bg">
+                                <i class="fa fa-comments"></i>
+                            </div>
+
+                            <div class="vertical-timeline-content">
+                                <h2>Similar Companies</h2>
+                                <ul>
+                                    <li>Mest</li>
+                                    <li>Siemens</li>
+                                    <li>Salesforce</li>
+                                    <li>Microsoft</li>
+                                </ul>
+                                <span class="vertical-date">View<small> All</small></span>
+                            </div>
+                        </div>
+
+                            <div class="vertical-timeline-block">
+                            <div class="vertical-timeline-icon navy-bg">
+                                <i class="fa fa-comments"></i>
+                            </div>
+
+                            <div class="vertical-timeline-content">
+                                <h2>Social</h2>
+                            <button class="btn btn-info btn-circle" type="button"><i class="fa fa-check"></i></button>
+                            <button class="btn btn-info btn-circle" type="button"><i class="fa fa-check"></i></button>
+                            <button class="btn btn-info btn-circle" type="button"><i class="fa fa-check"></i></button>
+                            <button class="btn btn-info btn-circle" type="button"><i class="fa fa-check"></i></button>
+                                <span class="vertical-date">Connect<small> Today</small></span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        <div class="footer">
+            <div class="pull-right">
+                10GB of <strong>250GB</strong> Free.
+            </div>
+            <div>
+                <strong>Copyright</strong> Example Company &copy; 2014-2015
+            </div>
+        </div>
+
+        </div>
+        </div>
+
+
+
+    <!-- Mainly scripts -->
+    <script src="js/jquery-2.1.1.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+    <!-- Custom and plugin javascript -->
+    <script src="js/inspinia.js"></script>
+    <script src="js/plugins/pace/pace.min.js"></script>
+
+    <!-- Sparkline -->
+    <script src="js/plugins/sparkline/jquery.sparkline.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+
+
+            $("#sparkline1").sparkline([34, 43, 43, 35, 44, 32, 44, 48], {
+                type: 'line',
+                width: '100%',
+                height: '50',
+                lineColor: '#1ab394',
+                fillColor: "transparent"
+            });
+
+
+        });
+    </script>
+
+</body>
+
+
+<!-- Mirrored from webapplayers.com/inspinia_admin-v2.3/profile_2.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 10 Nov 2015 01:52:03 GMT -->
+</html>
