@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>JOB POST FORM </title>
+        <link rel="stylesheet" th:href="@{/css/styles.css}"/>
+         <link rel="stylesheet" th:href="@{/css/custom.css}"/>
+          <link rel="stylesheet" th:href="@{/css/main.css}"/>
+
+    </head>
+	<body>
+	
+		<div>
+ 	<h1>HR NEW JOBS POST</h1>
+ 	
+	     <form action="#" th:action="@{/save}" th:object="${janta}" method="post">
+	
+	     <table>
+	     <tr>
+			<td width="10%">Job Title :</td>
+				
+			<td width="90%" align="left">
+			<input type="text" th:field="*{JobTitle}" />
+			</td>
+								
+		</tr>
+		<tr>
+			<td>Job Summary  : 	</td>
+				
+			<td><input type="text" th:field="*{JobSummary}" />
+			
+			</td>
+									
+		</tr>
+		
+		<tr>
+			<td> Job description :	</td>
+				
+			<td>     <input type="text" th:field="*{JobDescription}" />
+
+			</td>
+									
+		</tr>
+		
+		
+		<tr>
+			<td> Location :	</td>
+				
+			<td>     <input type="text" th:field="*{Location}" />
+
+			</td>
+									
+		</tr>
+		
+		
+		<tr>
+			<td> Industry :	</td>
+				
+			<td>     <input type="text" th:field="*{Industry}" />
+			</td>
+									
+		</tr>
+		
+		
+		<tr>
+			<td> Profession :	</td>
+				
+			<td>     <input type="text" th:field="*{Profession}" />
+			</td>
+									
+		</tr>
+		
+		<tr>
+			<td> Job type :	</td>
+				
+			<td>     <input type="text" th:field="*{JobType}" />
+			</td>
+									
+		</tr>
+		
+		
+		<tr>
+			<td> Career level :	</td>
+				
+			<td>     <input type="text" th:field="*{CareerLevel}" />
+			</td>
+									
+		</tr>
+		
+		
+		<tr>
+			<td> Min years of experience  :	</td>
+				
+			<td>     <input type="text" th:field="*{MinExperience}" />
+			</td>
+									
+		</tr>
+		
+		<tr>
+			<td> Min qualification :	</td>
+	 					
+				
+			<td>     <input type="text" th:field="*{MinQualification}" />
+			</td>
+									
+		</tr>
+		
+		
+		<tr>
+			<td> Salary :	</td>
+				
+			<td>     <input type="text" th:field="*{Salary}" />
+			</td>
+									
+		</tr>
+		
+		
+		<tr>
+			<td> Application deadline :	</td>
+				
+			<td>     <input type="text" th:field="*{DeadlineDate}" />
+			</td>
+									
+		</tr>
+		
+		
+		<tr>
+		<td>	</td>
+		<td >
+	              <input type="submit" value="POST JOBS"/> 
+	              
+	            </td>
+	        </tr>
+	        
+		</table>
+		
+		
+	    
+	     </form>
+	     </div>
+	</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Students List</title>
+
+<link rel="stylesheet" th:href="@{/css/custom.css}" />
+<link rel="stylesheet" th:href="@{/css/main.css}" />
+</head>
+
+
+<body>
+<h1 align="center">NEW POSTED HUSTLES LIST </h1>
+<table id="t02"  cellpadding="2">
+<tr>
+<th>
+<a  href="/jobos"><h2>POST NEW HUSTLES</h2></a>
+
+</th>
+
+<th>
+
+
+</th>
+</tr>
+</table>
+	<table>
+
+
+	</table>
+
+	<form:form>
+		<table id="t01" border="2" width="70%" cellpadding="2">
+			<tr>
+
+				<th>JOB Id</th>
+				<th>jobTitle</th>
+				<th>jobSummary</th>
+				<th>jobDescription</th>
+				<th>location</th>
+				<th>industry</th>
+				<th>profession</th>
+				<th>jobType</th>
+				<th>careerLevel</th>
+				<th>minExperience</th>
+				<th>minQualification</th>
+				<th>salary</th>
+				<th>deadlineDate</th>
+			</tr>
+			<tr th:each="newjobs : ${list}">
+
+				<td th:text="${newjobs.id}"></td>
+				<td th:text="${newjobs.JobTitle}"></td>
+				<td th:text="${newjobs.jobSummary}"></td>
+				<td th:text="${newjobs.jobDescription}"></td>
+				<td th:text="${newjobs.location}"></td>
+				<td th:text="${newjobs.industry}"></td>
+				<td th:text="${newjobs.profession}"></td>
+				<td th:text="${newjobs.jobType}"></td>
+				<td th:text="${newjobs.careerLevel}"></td>
+				<td th:text="${newjobs.minExperience}"></td>
+				<td th:text="${newjobs.minQualification}"></td>
+				<td th:text="${newjobs.salary}"></td>
+				<td th:text="${newjobs.deadlineDate}"></td>
+		</tr>
+	</table>
+		<br />
+
+
+	</form:form>
+</body>
+</html>
