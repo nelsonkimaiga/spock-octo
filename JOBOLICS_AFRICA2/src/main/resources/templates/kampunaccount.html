@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>PROFILE POST FORM</title>
+<link rel="stylesheet" th:href="@{/css/styles.css}" />
+<link rel="stylesheet" th:href="@{/css/custom.css}" />
+<link rel="stylesheet" th:href="@{/css/main.css}" />
+
+</head>
+<body>
+
+	<div>
+		<h1>COMPANY ACCOUNT POST</h1>
+
+		<form action="#" th:action="@{/savekompanyaccount}"
+			th:object="${kompanyacc}" method="post">
+
+			<table>
+
+				<tr>
+					<td>CompanyName :</td>
+
+					<td><input type="text" th:field="*{CompanyName}" /></td>
+
+				</tr>
+
+
+				<tr>
+					<td>PhoneNumber:</td>
+
+					<td><input type="text" th:field="*{PhoneNumber}" /></td>
+
+				</tr>
+
+
+				<tr>
+					<td>Number_of_employees:</td>
+
+					<td><input type="text" th:field="*{Number_of_employees}" /></td>
+
+				</tr>
+
+				<tr>
+					<td>CompanyURL :</td>
+
+					<td><input type="text" th:field="*{CompanyURL}" /></td>
+
+				</tr>
+
+
+				<tr>
+					<td>OrganisationType :</td>
+
+					<td><input type="text" th:field="*{OrganisationType}" /></td>
+
+				</tr>
+
+				<tr>
+					<td>PrimaryIndustry :</td>
+
+					<td><input type="text" th:field="*{PrimaryIndustry}" /></td>
+
+				</tr>
+
+
+				<tr>
+					<td>Location :</td>
+
+					<td><input type="text" th:field="*{Location}" /></td>
+
+				</tr>
+
+
+				<tr>
+					<td>DateEstablished :</td>
+
+					<td><input type="text" th:field="*{DateEstablished}" /></td>
+
+				</tr>
+
+
+
+				<tr>
+					<td>Headquarters :</td>
+
+					<td><input type="text" th:field="*{Headquarters}" /></td>
+
+				</tr>
+
+
+				<tr>
+					<td>SocialMedia :</td>
+
+					<td><input type="text" th:field="*{SocialMedia}" /></td>
+
+				</tr>
+				
+				
+				<tr>
+					<td>Logo :</td>
+					<td><input type="file" th:field="*{Logo}" accept="image/*" />
+					</td>
+				</tr>
+				
+
+
+
+				<tr>
+					<td></td>
+					<td><input type="submit" value="POST JOBS" /></td>
+				</tr>
+
+			</table>
+
+
+
+		</form>
+	</div>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Students List</title>
+
+<link rel="stylesheet" th:href="@{/css/custom.css}" />
+<link rel="stylesheet" th:href="@{/css/main.css}" />
+</head>
+
+
+<body>
+<h1 align="center">COMPANIES ACCOUNTS LIST </h1>
+<table id="t02"  cellpadding="2">
+<tr>
+<th>
+<a  href="/jobos"><h2>CREATE COMPANY ACCOUNT</h2></a>
+
+</th>
+
+<th>
+
+
+</th>
+</tr>
+</table>
+	<table>
+
+
+	</table>
+
+	<form:form>
+		<table id="t01" border="2" width="70%" cellpadding="2">
+			<tr>
+
+		
+			
+				<th>CompanyName</th>
+				<th>PhoneNumber us</th>
+				<th>Number_of_employees</th>
+				<th>CompanyURL</th>
+				<th>OrganisationType</th>
+				<th>PrimaryIndustry</th>
+				<th>Location</th>
+				<th>DateEstablished</th>
+				<th>Headquarters</th>
+				<th>SocialMedia</th>
+				<th>Logo</th>
+				
+				
+				
+			</tr>
+			<tr th:each="company_account: ${list}">
+
+				<td th:text="${company_account.CompanyName}"></td>
+				<td th:text="${company_account.PhoneNumber}"></td>
+				<td th:text="${company_account.number_of_employees}"></td>
+				<td th:text="${company_account.CompanyURL}"></td>
+				<td th:text="${company_account.OrganisationType}"></td>
+				<td th:text="${company_account.PrimaryIndustry}"></td>
+				<td th:text="${company_account.Location}"></td>
+				<td th:text="${company_account.DateEstablished}"></td>
+				<td th:text="${company_account.Headquarters}"></td>
+				<td th:text="${company_account.SocialMedia}"></td>
+				<td th:text="${company_account.Logo}"></td>
+				
+				
+		</tr>
+	</table>
+		<br />
+
+
+	</form:form>
+</body>
+</html>

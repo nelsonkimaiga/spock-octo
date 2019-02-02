@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Students List</title>
+
+<link rel="stylesheet" th:href="@{/css/custom.css}" />
+<link rel="stylesheet" th:href="@{/css/main.css}" />
+</head>
+
+
+<body>
+<h1 align="center">NEW POSTED HUSTLES LIST </h1>
+<table id="t02"  cellpadding="2">
+<tr>
+<th>
+<a  href="/jobos"><h2>COMPANY PROFILES LIST</h2></a>
+
+</th>
+
+<th>
+
+
+</th>
+</tr>
+</table>
+	<table>
+
+
+	</table>
+
+	<form:form>
+		<table id="t01" border="2" width="70%" cellpadding="2">
+			<tr>
+
+				<th>JOB Id</th>
+			
+				<th>Specialties</th>
+				<th>About us</th>
+				<th>Benefits</th>
+				<th>Awards</th>
+				<th>Mission</th>
+				<th>Vision</th>
+				<th>Values</th>
+				<th>Workingwithus</th>
+				
+			</tr>
+			<tr th:each="company_profile: ${list}">
+
+				<td th:text="${company_profile.id}"></td>
+				<td th:text="${company_profile.Specialties}"></td>
+				<td th:text="${company_profile.Aboutus}"></td>
+				<td th:text="${company_profile.Benefits}"></td>
+				<td th:text="${company_profile.Awards}"></td>
+				<td th:text="${company_profile.Mission}"></td>
+				<td th:text="${company_profile.Vision}"></td>
+				<td th:text="${company_profile.Values}"></td>
+				<td th:text="${company_profile.Workingwithus}"></td>
+				
+		</tr>
+	</table>
+		<br />
+
+
+	</form:form>
+</body>
+</html>
