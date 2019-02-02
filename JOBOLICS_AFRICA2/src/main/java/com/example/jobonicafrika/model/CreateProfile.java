@@ -20,43 +20,43 @@ public class CreateProfile {
 	private int id;
 
 	@Column(name = "full_name")
-	@NotEmpty(message = "Please provide your full names")
-	private String fullName;
+	//@NotEmpty(message = "Please provide your full names")
+	private String fullname;
 
 	@Column(name = "profpic")
 	
-	private Blob profPic;
+	private byte[] profPic;
 
 	@Column(name = "Aboutme")
-	@NotEmpty(message = "Please provide deatils about you")
+	//@NotEmpty(message = "Please provide deatils about you")
 	private String aboutMe;
 
 	@Column(name = "current_Position")
-	@NotEmpty(message = "Please provide your Current Position and Company")
+	//@NotEmpty(message = "Please provide your Current Position and Company")
 	private String currentPosition;
 
 	@Column(name = "work_experience")
-	@NotEmpty(message = "Please provide your work experience")
+	//@NotEmpty(message = "Please provide your work experience")
 	private String workExperience;
 
 	@Column(name = "education")
-	@NotEmpty(message = "Please provide your Academics Details")
+	//@NotEmpty(message = "Please provide your Academics Details")
 	private String education;
 
 	@Column(name = "contacts")
-	@NotEmpty(message = "Please provide your Contact")
+	//@NotEmpty(message = "Please provide your Contact")
 	private String contacts;
 
 	@Column(name = "skills")
-	@NotEmpty(message = "Please provide your skills")
+	//@NotEmpty(message = "Please provide your skills")
 	private String skills;
 
 	@Column(name = "intrests")
-	@NotEmpty(message = "Please provide your full names")
+	//@NotEmpty(message = "Please provide your full names")
 	private String intrests;
 
 	@Column(name = "reviews")
-	@NotEmpty(message = "Please provide your reviews")
+	//@NotEmpty(message = "Please provide your reviews")
 	private String reviews;
 
 	@Column(name = "awards")
@@ -73,22 +73,17 @@ public class CreateProfile {
 		this.id = id;
 	}
 
-	public String getFullName() {
-		return fullName;
+	
+
+	public String getFullname() {
+		return fullname;
 	}
 
-	public void setFullName(String fullName) {
-		this.fullName = fullName;
+	public void setFullname(String fullname) {
+		this.fullname = fullname;
 	}
 
-	public Blob getProfPic() {
-		return profPic;
-	}
-
-	public void setProfPic(Blob profPic) {
-		this.profPic = profPic;
-	}
-
+	
 	public String getAboutMe() {
 		return aboutMe;
 	}
@@ -169,13 +164,13 @@ public class CreateProfile {
 		this.languages = languages;
 	}
 
-	public CreateProfile(int id, String fullName, Blob profPic, String aboutMe, String currentPosition,
+	public CreateProfile(int id, String fullName,  String aboutMe, String currentPosition,
 			String workExperience, String education, String contacts, String skills, String intrests, String reviews,
 			String awards, String languages) {
 		super();
 		this.id = id;
-		this.fullName = fullName;
-		this.profPic = profPic;
+		this.fullname = fullName;
+		
 		this.aboutMe = aboutMe;
 		this.currentPosition = currentPosition;
 		this.workExperience = workExperience;
@@ -186,6 +181,14 @@ public class CreateProfile {
 		this.reviews = reviews;
 		this.awards = awards;
 		this.languages = languages;
+	}
+
+	public byte[] getProfPic() {
+		return profPic;
+	}
+
+	public void setProfPic(byte[] profPic) {
+		this.profPic = profPic;
 	}
 
 	public CreateProfile() {

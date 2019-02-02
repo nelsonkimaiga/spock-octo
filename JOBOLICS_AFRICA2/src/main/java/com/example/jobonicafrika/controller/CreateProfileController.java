@@ -29,7 +29,7 @@ public class CreateProfileController {
 	@RequestMapping(value="/newprofile",method=RequestMethod.GET)
 	public String newRegistration(ModelMap model) {
 		CreateProfile createprofile = new CreateProfile();
-		model.addAttribute("prof",createprofile);
+		model.addAttribute("profile",createprofile);
 		return "newprofile";
 	}
 	
@@ -59,7 +59,7 @@ public class CreateProfileController {
 	public String edit (@PathVariable int id,ModelMap model) {
 		
 		CreateProfile createprofile=CPS.findOne(id);
-		model.addAttribute("prof",createprofile);
+		model.addAttribute("profile",createprofile);
 		return "editprofile";
 	}
 	*/
@@ -67,7 +67,7 @@ public class CreateProfileController {
 	////////////ngorireee
 	/*
 	@RequestMapping(value="/editsave",method=RequestMethod.POST)
-	public ModelAndView editsave(@ModelAttribute("prof") CreateProfile p) {
+	public ModelAndView editsave(@ModelAttribute("profile") CreateProfile p) {
 		
 		CreateProfile createprofile=CPS.findOne(p.getId());
 		

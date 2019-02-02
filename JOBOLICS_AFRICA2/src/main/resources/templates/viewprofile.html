@@ -41,24 +41,24 @@
 				<th>Awards</th>
 				<th>Languages</th>
 			</tr>
-			<tr th:each="create_profile : ${list}">
+			<tr th:each="hustlers_profile : ${list}">
 
-				<td th:text="${create_profile.id}"></td>
-				<td th:text="${create_profile.fullName}"></td>
+				<td th:text="${hustlers_profile.id}"></td>
+				<td th:text="${hustlers_profile.fullname}"></td>
 
-				<td th:text="${create_profile.profPic}"></td>
+				<td th:text="${hustlers_profile.profPic}"></td>
 				
 
-				<td th:text="${create_profile.aboutMe}"></td>
-				<td th:text="${create_profile.currentPosition}"></td>
-				<td th:text="${create_profile.workExperience}"></td>
-				<td th:text="${create_profile.education}"></td>
-				<td th:text="${create_profile.contacts}"></td>
-				<td th:text="${create_profile.skills}"></td>
-				<td th:text="${create_profile.intrests}"></td>
-				<td th:text="${create_profile.reviews}"></td>
-				<td th:text="${create_profile.awards}"></td>
-				<td th:text="${create_profile.languages}"></td>
+				<td th:text="${hustlers_profile.aboutMe}"></td>
+				<td th:text="${hustlers_profile.currentPosition}"></td>
+				<td th:text="${hustlers_profile.workExperience}"></td>
+				<td th:text="${hustlers_profile.education}"></td>
+				<td th:text="${hustlers_profile.contacts}"></td>
+				<td th:text="${hustlers_profile.skills}"></td>
+				<td th:text="${hustlers_profile.intrests}"></td>
+				<td th:text="${hustlers_profile.reviews}"></td>
+				<td th:text="${hustlers_profile.awards}"></td>
+				<td th:text="${hustlers_profile.languages}"></td>
 			</tr>
 		</table>
 		<br />

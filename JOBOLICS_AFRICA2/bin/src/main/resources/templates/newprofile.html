@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>PROFILE POST FORM</title>
+<link rel="stylesheet" th:href="@{/css/styles.css}" />
+<link rel="stylesheet" th:href="@{/css/custom.css}" />
+<link rel="stylesheet" th:href="@{/css/main.css}" />
+
+</head>
+<body>
+
+	<div>
+		<h1>HR NEW JOBS POST</h1>
+
+		<form action="#" th:action="@{/saveprofiles}" th:object="${prof}"
+			method="post">
+
+			<table>
+				
+				<tr>
+					<td>full Name :</td>
+
+					<td><input type="text" th:field="*{fullName}" /></td>
+
+				</tr>
+
+				<tr>
+					<td>Profile Pic :</td>
+					<td><input 
+					type="file" 
+					th:field="*{profPic}" 
+					accept="image/*" />
+					</td>
+				</tr>
+
+
+				<tr>
+					<td>About Me:</td>
+
+					<td><input type="text" th:field="*{aboutMe}" /></td>
+
+				</tr>
+
+				<tr>
+					<td>Current Position :</td>
+
+					<td><input type="text" th:field="*{currentPosition}" /></td>
+
+				</tr>
+
+
+				<tr>
+					<td>Work Experience :</td>
+
+					<td><input type="text" th:field="*{workExperience}" /></td>
+
+				</tr>
+
+				<tr>
+					<td>Education :</td>
+
+					<td><input type="text" th:field="*{education}" /></td>
+
+				</tr>
+
+
+				<tr>
+					<td>Contacts :</td>
+
+					<td><input type="text" th:field="*{contacts}" /></td>
+
+				</tr>
+
+
+				<tr>
+					<td>Skills :</td>
+
+					<td><input type="text" th:field="*{skills}" /></td>
+
+				</tr>
+
+				<tr>
+					<td>Intrests :</td>
+
+
+					<td><input type="text" th:field="*{intrests}" /></td>
+
+				</tr>
+
+
+				<tr>
+					<td>Reviews :</td>
+
+					<td><input type="text" th:field="*{reviews}" /></td>
+
+				</tr>
+
+
+				<tr>
+					<td>Awards :</td>
+
+					<td><input type="text" th:field="*{awards}" /></td>
+
+				</tr>
+
+
+				<tr>
+					<td>languages :</td>
+
+					<td><input type="text" th:field="*{languages}" /></td>
+
+				</tr>
+
+			<tr>
+					<td></td>
+					<td><input type="submit" value="POST JOBS" /></td>
+				</tr>
+
+			</table>
+
+
+
+		</form>
+	</div>
+</body>
+</html>

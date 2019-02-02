@@ -11,39 +11,28 @@
 <body>
 
 	<div>
-		<h1>HR NEW JOBS POST</h1>
+		<h1>HUSTLER PROFILE POST</h1>
 
-		<form action="#" th:action="@{/saveprofiles}" th:object="${prof}"
+		<form action="#" th:action="@{/saveprofiles}" th:object="${profile}"
 			method="post">
 
 			<table>
-				
 				<tr>
-					<td>full Name :</td>
+					<td>fullname:</td>
 
-					<td><input type="text" th:field="*{fullName}" /></td>
+					<td><input type="text" th:field="*{fullname}" /></td>
 
 				</tr>
-
+			
 				<tr>
-					<td>Profile Pic :</td>
-					<td><input 
-					type="file" 
-					th:field="*{profPic}" 
-					accept="image/*" />
-					</td>
-				</tr>
-
-
-				<tr>
-					<td>About Me:</td>
+					<td>aboutMe:</td>
 
 					<td><input type="text" th:field="*{aboutMe}" /></td>
 
 				</tr>
 
 				<tr>
-					<td>Current Position :</td>
+					<td>currentPosition :</td>
 
 					<td><input type="text" th:field="*{currentPosition}" /></td>
 
@@ -51,14 +40,14 @@
 
 
 				<tr>
-					<td>Work Experience :</td>
+					<td>workExperience :</td>
 
 					<td><input type="text" th:field="*{workExperience}" /></td>
 
 				</tr>
 
 				<tr>
-					<td>Education :</td>
+					<td>education :</td>
 
 					<td><input type="text" th:field="*{education}" /></td>
 
@@ -66,7 +55,7 @@
 
 
 				<tr>
-					<td>Contacts :</td>
+					<td>contacts :</td>
 
 					<td><input type="text" th:field="*{contacts}" /></td>
 
@@ -74,15 +63,14 @@
 
 
 				<tr>
-					<td>Skills :</td>
+					<td>skills :</td>
 
 					<td><input type="text" th:field="*{skills}" /></td>
 
 				</tr>
 
 				<tr>
-					<td>Intrests :</td>
-
+					<td>intrests :</td>
 
 					<td><input type="text" th:field="*{intrests}" /></td>
 
@@ -90,20 +78,17 @@
 
 
 				<tr>
-					<td>Reviews :</td>
+					<td>reviews :</td>
 
 					<td><input type="text" th:field="*{reviews}" /></td>
 
 				</tr>
-
-
 				<tr>
-					<td>Awards :</td>
+					<td>awards :</td>
 
 					<td><input type="text" th:field="*{awards}" /></td>
 
 				</tr>
-
 
 				<tr>
 					<td>languages :</td>
@@ -112,9 +97,20 @@
 
 				</tr>
 
-			<tr>
+				<tr>
+					<td>Profile Pic :</td>
+					<td><input type="file" th:field="*{profPic}" accept="image/*" />
+					</td>
+				</tr>
+
+
+
+
+
+
+				<tr>
 					<td></td>
-					<td><input type="submit" value="POST JOBS" /></td>
+					<td><input type="submit" value="CREATE PROFILE" /></td>
 				</tr>
 
 			</table>
