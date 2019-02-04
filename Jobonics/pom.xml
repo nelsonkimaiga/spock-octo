@@ -10,7 +10,8 @@
    <parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>1.5.4.RELEASE</version>
+		<version>1.5.3.RELEASE</version>
+<!-- 		<version>1.5.3.RELEASE</version> -->
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<properties>
@@ -34,10 +35,15 @@
 		</dependency>
         
         <dependency>
-			<groupId>org.thymeleaf.extras</groupId>
-			<artifactId>thymeleaf-extras-springsecurity4</artifactId>
+		    <groupId>org.thymeleaf.extras</groupId>
+		    <artifactId>thymeleaf-extras-springsecurity4</artifactId>
 		</dependency>
-        
+		
+<!--         <dependency> -->
+<!-- 		    <groupId>org.springframework.session</groupId> -->
+<!-- 		    <artifactId>spring-session-core</artifactId> -->
+<!-- 		    <version>2.0.0.RELEASE</version> -->
+<!-- 		</dependency> -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
@@ -54,6 +60,12 @@
 			<artifactId>mysql-connector-java</artifactId>
 			<scope>runtime</scope>
 		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-test</artifactId>
+			<scope>test</scope>
+		</dependency>
         
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -67,15 +79,25 @@
   			<version>1.2.3</version>
 		</dependency>
 
-		
+		<dependency>
+			<groupId>net.sourceforge.nekohtml</groupId>
+			<artifactId>nekohtml</artifactId>
+			<version>1.9.21</version>
+		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-mail</artifactId>
-		</dependency>
-		
+		</dependency>	
   </dependencies>
-  <build>
-    <finalName>JobonicsAfrica</finalName>
-  </build>
+  
+		  <build>
+		    <finalName>JobonicsAfrica</finalName>
+		    <plugins>
+				<plugin>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-maven-plugin</artifactId>
+				</plugin>
+			</plugins>
+		  </build>
 </project>

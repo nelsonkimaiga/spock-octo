@@ -1,41 +1,58 @@
 package com.example.jobonics.model;
 
-import java.util.Set;
-
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
-@Entity
-@Table(name = "user")
-public class User {
+import org.hibernate.validator.constraints.Email;
+import org.hibernate.validator.constraints.NotEmpty;
+import org.springframework.data.annotation.Transient;
 
+@Entity
+@Table(name = "jobseeker")
+public class User {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name = "id")
 	private int id;
-
-	@Column(name = "email")
+	
+	@Column(name = "full_name")
+	@NotEmpty(message = "Please provide your full names")
+	private String fullName;
+	
+	@Column(name = "email", nullable = false, unique = true)
+	@Email(message = "Please provide a valid e-mail")
+	@NotEmpty(message = "Please provide an e-mail")
 	private String email;
-
-	@Column(name = "username")
-	private String username;
-
+	
+	@Column(name = "country")
+	@NotEmpty(message = "Please provide country name")
+	private String country;
+	
+	@Column(name = "phone_number")
+	@NotEmpty(message = "Please provide your phone number")
+	private String phoneNumber;
+	
 	@Column(name = "password")
+	@Transient
 	private String password;
+	
+	@Column(name = "enabled")
+	private boolean enabled;
+	
+	@Column(name = "confirmation_token")
+	private String confirmationToken;
 
-	@Column(name = "active")
-	private int active;
+	public String getConfirmationToken() {
+		return confirmationToken;
+	}
 
-	@ManyToMany(cascade = CascadeType.ALL)
-	@JoinTable(name = "user_role", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "role_id"))
-	private Set<Role> roles;
+	public void setConfirmationToken(String confirmationToken) {
+		this.confirmationToken = confirmationToken;
+	}
 
 	public int getId() {
 		return id;
@@ -44,7 +61,15 @@ public class User {
 	public void setId(int id) {
 		this.id = id;
 	}
+	
+	public String getFullName() {
+		return fullName;
+	}
 
+	public void setFullName(String fullName) {
+		this.fullName = fullName;
+	}
+	
 	public String getEmail() {
 		return email;
 	}
@@ -52,13 +77,21 @@ public class User {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-
-	public String getUsername() {
-		return username;
+	
+	public String getCountry() {
+		return country;
 	}
 
-	public void setUsername(String username) {
-		this.username = username;
+	public void setCountry(String country) {
+		this.country = country;
+	}
+	
+	public String getPhoneNumber() {
+		return phoneNumber;
+	}
+
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
 	}
 
 	public String getPassword() {
@@ -69,19 +102,11 @@ public class User {
 		this.password = password;
 	}
 
-	public int getActive() {
-		return active;
+	public boolean getEnabled() {
+		return enabled;
 	}
 
-	public void setActive(int active) {
-		this.active = active;
-	}
-
-	public Set<Role> getRoles() {
-		return roles;
-	}
-
-	public void setRoles(Set<Role> roles) {
-		this.roles = roles;
+	public void setEnabled(boolean value) {
+		this.enabled = value;
 	}
 }
