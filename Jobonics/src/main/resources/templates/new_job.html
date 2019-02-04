@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html>
-
+<html  xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org >
+ 
 
 <!-- Mirrored from webapplayers.com/inspinia_admin-v2.3/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 10 Nov 2015 01:42:55 GMT -->
 <head>
@@ -271,20 +271,21 @@
                             </div>
                         </div>
                         <div class="ibox-content">
-                            <form method="get" class="form-horizontal">
+                            <form  class="form-horizontal"  th:action="@{/save}" th:object="${newjobs}" method="post"         >
                                 <div class="form-group"><label class="col-sm-3 control-label">Job Title</label>
+                                
 
-                                    <div class="col-sm-7"><input type="text" class="form-control"></div>
+                                    <div class="col-sm-7"><input type="text" class="form-control" th:field="*{JobTitle}"></div>
                                 </div>
                                 <div class="form-group"><label class="col-sm-3 control-label">Job Summary</label>
-                                    <div class="col-sm-7"><input type="text" class="form-control"> 
+                                    <div class="col-sm-7"><input type="text" class="form-control"th:field="*{JobSummary}"> 
                                     </div>
                                 </div>
 
                                 <div class="hr-line-dashed"></div>
 
                                 <div class="form-group"><label class="col-sm-3 control-label">Job Description</label>
-                                    <div class="col-sm-7"><input type="text"  placeholder= "Text Area + Editor" class="form-control"> 
+                                    <div class="col-sm-7"><input type="text"  placeholder= "Text Area + Editor" class="form-control"th:field="*{JobDescription}" > 
                                     </div>
                                 </div>
 
@@ -303,75 +304,75 @@
      
    
                                 <div class="form-group"><label class="col-sm-3 control-label">Location</label>
-                                    <div class="col-sm-6"><select class="form-control m-b" name="account">
-                                        <option>Nairobi</option>
-                                        <option>option 2</option>
-                                        <option>option 3</option>
-                                        <option>option 4</option>
+                                    <div class="col-sm-6"><select class="form-control m-b" name="account"th:field="*{Location}">
+                                        <option th:value="'Nairobi'">Nairobi</option>
+                                        <option th:value="'Mombasa'">Mombasa</option>
+                                        <option th:value="'Nyeri'">Nyeri</option>
+                                        <option th:value="'Kisumu'">Kisumu</option>
                                     </select>
                                     </div>
                                 </div>
 
                                  <div class="form-group"><label class="col-sm-3 control-label">Industry</label>
-                                    <div class="col-sm-6"><select class="form-control m-b" name="account">
-                                        <option>Banking & Financial</option>
-                                        <option>option 2</option>
-                                        <option>option 3</option>
-                                        <option>option 4</option>
+                                    <div class="col-sm-6"><select class="form-control m-b" name="account"th:field="*{Industry}">
+                                        <option th:value="'Banking & Financial'">Banking & Financial</option>
+                                        <option th:value="'IT Sector'">IT Sector</option>
+                                        <option th:value="'Hospitality'">Hospitality</option>
+                                        <option th:value="'Education'">Education</option>
                                     </select>
                                     </div>
                                 </div>
 
                                  <div class="form-group"><label class="col-sm-3 control-label">Profession</label>
-                                    <div class="col-sm-6"><select class="form-control m-b" name="account">
-                                        <option>Social Media</option>
-                                        <option>option 2</option>
-                                        <option>option 3</option>
-                                        <option>option 4</option>
+                                    <div class="col-sm-6"><select class="form-control m-b" name="account"th:field="*{Profession}">
+                                        <option th:value="'Social Media'">Social Media</option>
+                                        <option th:value="'Accountant'">Accountant</option>
+                                        <option th:value="'HR'">HR</option>
+                                        <option th:value="'Technician'">Technician</option>
                                     </select>
                                     </div>
                                 </div>
 
                                  <div class="form-group"><label class="col-sm-3 control-label">Job Type</label>
-                                    <div class="col-sm-6"><select class="form-control m-b" name="account">
-                                        <option>Fulltime</option>
-                                        <option>Internship</option>
-                                        <option>Temporary</option>
-                                        <option>Contract</option>
+                                    <div class="col-sm-6"><select class="form-control m-b" name="account"th:field="*{JobType}">
+                                        <option th:value="'Fulltime'">Fulltime</option>
+                                        <option th:value="'Internship'">Internship</option>
+                                        <option th:value="'Temporary'">Temporary</option>
+                                        <option th:value="'Contract'">Contract</option>
                                     </select>
                                     </div>
                                 </div>
 
                                  <div class="form-group"><label class="col-sm-3 control-label">Job Level</label>
-                                    <div class="col-sm-6"><select class="form-control m-b" name="account">
-                                        <option>Executive</option>
-                                        <option>Student</option>
-                                        <option>Entry Level</option>
-                                        <option>Manager</option>
+                                    <div class="col-sm-6"><select class="form-control m-b" name="account"th:field="*{CareerLevel}">
+                                        <option th:value="'Executive'">Executive</option>
+                                        <option th:value="'Student'">Student</option>
+                                        <option th:value="'Entry Level'">Entry Level</option>
+                                        <option th:value="'Manager'">Manager</option>
                                     </select>
                                     </div>
                                 </div>
                                
                                 <div class="form-group"><label class="col-sm-3 control-label">Min Qualification</label>
-                                    <div class="col-sm-6"><select class="form-control m-b" name="account">
-                                        <option>Master</option>
-                                        <option>option 2</option>
-                                        <option>option 3</option>
-                                        <option>option 4</option>
+                                    <div class="col-sm-6"><select class="form-control m-b" name="account"th:field="*{MinQualification}">
+                                        <option th:value="'Master'">Master</option>
+                                        <option th:value="'O-level'">O-level</option>
+                                        <option th:value="'Graduate'">Graduate</option>
+                                        <option th:value="'Diploma'">Diploma</option>
                                     </select>
                                     </div>
                                 </div> 
 
                                  <div class="form-group"><label class="col-sm-3 control-label">Min years of experience</label>
-                                   <div class="col-sm-6"><input type="text"  placeholder= "Years" class="form-control"> </div>
+                                   <div class="col-sm-6"><input type="text"  placeholder= "Years" class="form-control"th:field="*{MinExperience}"> </div>
                                 </div>  
 
                                 <div class="form-group"><label class="col-sm-3 control-label">Salary</label>
-                                   <div class="col-sm-6"><input type="text"  placeholder= "Kes" class="form-control"> </div>
+                                   <div class="col-sm-6"><input type="text"  placeholder= "Kes" class="form-control"th:field="*{Salary}"> </div>
                                 </div> 
 
                                 <div class="form-group"><label class="col-sm-3 control-label">Application deadline</label>
-                                   <div class="col-sm-6"><input type="text"  placeholder= "Date" class="form-control"> </div>
+                                   <div class="col-sm-6"><input type="text"  placeholder= "Date" class="form-control"th:field="*{DeadlineDate}"> </div>
                                 </div>    
 
 

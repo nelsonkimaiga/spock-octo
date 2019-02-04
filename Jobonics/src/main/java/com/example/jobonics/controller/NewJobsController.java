@@ -25,11 +25,11 @@ public class NewJobsController {
 	@Autowired
 	private NewJobsService NJS;
 	
-	@RequestMapping(value="/jobos",method=RequestMethod.GET)
+	@RequestMapping(value="/newjobs",method=RequestMethod.GET)
 	public String newRegistration(ModelMap model) {
 		NewJobs newJobs = new NewJobs();
-		model.addAttribute("janta",newJobs);
-		return "jobos";
+		model.addAttribute("newjobs",newJobs);
+		return "new_job";
 	}
 	
 	@RequestMapping(value="/save",method=RequestMethod.POST)
@@ -37,7 +37,7 @@ public class NewJobsController {
 		
 		if(result.hasErrors()) {
 			System.out.println("has errors");
-			return "jobos";
+			return "new_job";
 		}
 	
 		NJS.save(newJobs);
@@ -58,7 +58,7 @@ public class NewJobsController {
 	public String edit (@PathVariable int id,ModelMap model) {
 		
 		NewJobs newJobs=NJS.findOne(id);
-		model.addAttribute("janta",newJobs);
+		model.addAttribute("newjobs",newJobs);
 		return "editstudent";
 	}
 	
@@ -66,7 +66,7 @@ public class NewJobsController {
 	////////////ngorireee
 	/*
 	@RequestMapping(value="/editsave",method=RequestMethod.POST)
-	public ModelAndView editsave(@ModelAttribute("janta") NewJobs p) {
+	public ModelAndView editsave(@ModelAttribute("newjobs") NewJobs p) {
 		
 		NewJobs newJobs=NJS.findOne(p.getId());
 		

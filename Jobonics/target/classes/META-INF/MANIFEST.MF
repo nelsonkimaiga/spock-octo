@@ -1,9 +1,9 @@
 Manifest-Version: 1.0
 Implementation-Title: Jobonics Africa MVP
 Implementation-Version: 0.0.1-SNAPSHOT
-Built-By: Kimaiga
+Built-By: Kemosabe
 Implementation-Vendor-Id: com.example
-Build-Jdk: 1.8.0_171
+Build-Jdk: 1.8.0_151
 Implementation-URL: http://maven.apache.org
 Created-By: Maven Integration for Eclipse
 Implementation-Vendor: Pivotal Software, Inc.
