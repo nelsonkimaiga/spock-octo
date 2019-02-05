@@ -11,6 +11,10 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>1.5.3.RELEASE</version>
+<<<<<<< HEAD
+=======
+<!-- 		<version>1.5.3.RELEASE</version> -->
+>>>>>>> 409636d55fbef2812a2dae2ab615dd805228b4ff
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<properties>
@@ -38,12 +42,20 @@
 		    <artifactId>thymeleaf-extras-springsecurity4</artifactId>
 		</dependency>
 		
+<<<<<<< HEAD
 		<dependency>
 		    <groupId>org.thymeleaf.extras</groupId>
 		    <artifactId>thymeleaf-extras-java8time</artifactId>
 		    <version>3.0.3.RELEASE</version>
 		</dependency>
 
+=======
+<!--         <dependency> -->
+<!-- 		    <groupId>org.springframework.session</groupId> -->
+<!-- 		    <artifactId>spring-session-core</artifactId> -->
+<!-- 		    <version>2.0.0.RELEASE</version> -->
+<!-- 		</dependency> -->
+>>>>>>> 409636d55fbef2812a2dae2ab615dd805228b4ff
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
@@ -61,6 +73,7 @@
 			<scope>runtime</scope>
 		</dependency>
 		
+<<<<<<< HEAD
 		<dependency>
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-test</artifactId>
@@ -118,7 +131,48 @@
 		    <groupId>org.hibernate.validator</groupId>
 		    <artifactId>hibernate-validator-annotation-processor</artifactId>
 		    <version>6.0.2.Final</version>
+=======
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-test</artifactId>
+			<scope>test</scope>
+>>>>>>> 409636d55fbef2812a2dae2ab615dd805228b4ff
 		</dependency>
+        
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		
+		<dependency>
+  			<groupId>com.nulab-inc</groupId>
+  			<artifactId>zxcvbn</artifactId>
+  			<version>1.2.3</version>
+		</dependency>
+
+		<dependency>
+			<groupId>net.sourceforge.nekohtml</groupId>
+			<artifactId>nekohtml</artifactId>
+			<version>1.9.21</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.webjars/bootstrap -->
+		<dependency>
+			<groupId>org.webjars</groupId>
+			<artifactId>bootstrap</artifactId>
+			<version>4.1.3</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.webjars/jquery -->
+		<dependency>
+			<groupId>org.webjars</groupId>
+			<artifactId>jquery</artifactId>
+			<version>3.3.1-1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-mail</artifactId>
+		</dependency>	
   </dependencies>
   
 		  <build>

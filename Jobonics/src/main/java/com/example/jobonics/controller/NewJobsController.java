@@ -25,7 +25,11 @@ public class NewJobsController {
 	@Autowired
 	private NewJobsService NJS;
 	
+<<<<<<< HEAD
 	@RequestMapping(value="/newjob",method=RequestMethod.GET)
+=======
+	@RequestMapping(value="/newjobs",method=RequestMethod.GET)
+>>>>>>> 409636d55fbef2812a2dae2ab615dd805228b4ff
 	public String newRegistration(ModelMap model) {
 		NewJobs newJobs = new NewJobs();
 		model.addAttribute("newjobs",newJobs);
@@ -52,6 +56,26 @@ public class NewJobsController {
 		List<NewJobs> list=NJS.findAll();
 		return new ModelAndView("viewjobos","list",list);
 	}
+<<<<<<< HEAD
+=======
+	
+	/*
+	@RequestMapping(value="/editstudent/{id}")
+	public String edit (@PathVariable int id,ModelMap model) {
+		
+		NewJobs newJobs=NJS.findOne(id);
+		model.addAttribute("newjobs",newJobs);
+		return "editstudent";
+	}
+	
+	*/
+	////////////ngorireee
+	/*
+	@RequestMapping(value="/editsave",method=RequestMethod.POST)
+	public ModelAndView editsave(@ModelAttribute("newjobs") NewJobs p) {
+		
+		NewJobs newJobs=NJS.findOne(p.getId());
+>>>>>>> 409636d55fbef2812a2dae2ab615dd805228b4ff
 		
 
 }

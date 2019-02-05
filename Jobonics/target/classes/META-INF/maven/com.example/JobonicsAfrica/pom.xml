@@ -11,6 +11,10 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>1.5.3.RELEASE</version>
+<<<<<<< HEAD
+=======
+<!-- 		<version>1.5.3.RELEASE</version> -->
+>>>>>>> 409636d55fbef2812a2dae2ab615dd805228b4ff
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<properties>
@@ -38,12 +42,20 @@
 		    <artifactId>thymeleaf-extras-springsecurity4</artifactId>
 		</dependency>
 		
+<<<<<<< HEAD
 		<dependency>
 		    <groupId>org.thymeleaf.extras</groupId>
 		    <artifactId>thymeleaf-extras-java8time</artifactId>
 		    <version>3.0.3.RELEASE</version>
 		</dependency>
 
+=======
+<!--         <dependency> -->
+<!-- 		    <groupId>org.springframework.session</groupId> -->
+<!-- 		    <artifactId>spring-session-core</artifactId> -->
+<!-- 		    <version>2.0.0.RELEASE</version> -->
+<!-- 		</dependency> -->
+>>>>>>> 409636d55fbef2812a2dae2ab615dd805228b4ff
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
@@ -100,6 +112,7 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-mail</artifactId>
+<<<<<<< HEAD
 		</dependency>
 		<!-- validation dependencies-->
 		<dependency>
@@ -119,6 +132,9 @@
 		    <artifactId>hibernate-validator-annotation-processor</artifactId>
 		    <version>6.0.2.Final</version>
 		</dependency>
+=======
+		</dependency>	
+>>>>>>> 409636d55fbef2812a2dae2ab615dd805228b4ff
   </dependencies>
   
 		  <build>
