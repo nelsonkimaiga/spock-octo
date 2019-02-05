@@ -42,7 +42,7 @@ public class NewJobsController {
 	
 		NJS.save(newJobs);
 		
-		return "redirect:/viewjobos";
+		return "redirect:/openings";
 	}
 	
 	
@@ -52,75 +52,5 @@ public class NewJobsController {
 		List<NewJobs> list=NJS.findAll();
 		return new ModelAndView("openings","list",list);
 	}
-	
-	/*
-	@RequestMapping(value="/editstudent/{id}")
-	public String edit (@PathVariable int id,ModelMap model) {
-		
-		NewJobs newJobs=NJS.findOne(id);
-		model.addAttribute("newjobs",newJobs);
-		return "editstudent";
-	}
-	
-	*/
-	////////////ngorireee
-	/*
-	@RequestMapping(value="/editsave",method=RequestMethod.POST)
-	public ModelAndView editsave(@ModelAttribute("newjobs") NewJobs p) {
-		
-		NewJobs newJobs=NJS.findOne(p.getId());
-		
-		newJobs.setFirstName(p.getFirstName());
-		newJobs.setLastName(p.getLastName());
-		newJobs.setCountry(p.getCountry());
-		newJobs.setEmail(p.getEmail());
-		newJobs.setSection(p.getSection());
-		newJobs.setSex(p.getSex());
-		
-		NJS.save(newJobs);
-		return new ModelAndView("redirect:/viewjobos");
-	}
-	
-	
-	*//*
-	
-	@RequestMapping(value="/deletestudent/{id}",method=RequestMethod.GET)
-	public ModelAndView delete(@PathVariable int id) {
-		NewJobs newJobs=NJS.findOne(id);
-		NJS.delete(newJobs);
-		return new ModelAndView("redirect:/viewjobos");
-	}
-	
-	*/
-/*
-	@ModelAttribute("sections")
-	public List<String> intializeSections(){
-		List<String> sections = new ArrayList<String>();
-		sections.add("Graduate");
-		sections.add("Post Graduate");
-		sections.add("Reasearch");
-		return sections;
-	}
-	*/
-	
-	/*
-	 * Method used to populate the country list in view. Note that here you can
-	 * call external systems to provide real data.
-	 *//*
-	@ModelAttribute("countries")
-	public List<String> initializeCountries() {
-		List<String> countries = new ArrayList<String>();
-		countries.add("INDIA");
-		countries.add("USA");
-		countries.add("CANADA");
-		countries.add("FRANCE");
-		countries.add("GERMANY");
-		countries.add("ITALY");
-		countries.add("OTHER");
-		return countries;
-	}
-	
-	*/
-	
 
 }

@@ -1,5 +1,6 @@
 package com.example.jobonics.model;
 
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EntityListeners;
@@ -7,9 +8,16 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.TemporalType;
 
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.Type;
 import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
+import org.springframework.data.jpa.repository.Temporal;
+import org.springframework.format.annotation.DateTimeFormat;
+import java.util.Date;
+
 @Entity
 @Table(name = "newjobs")
 @EntityListeners(AuditingEntityListener.class)
@@ -64,6 +72,10 @@ public class NewJobs {
 	@Column(name = "deadline_date")
 	@NotEmpty(message = "Please provide the Applications Deadline")
 	private String deadlineDate;
+	
+	@Column(name = "created_at", columnDefinition="datetime")
+	@Type(type="date")
+	private Date created_at;
 
 	public int getId() {
 		return id;
@@ -170,6 +182,14 @@ public class NewJobs {
 		this.deadlineDate = deadlineDate;
 	}
 
+	public Date getCreated_at() {
+		return created_at;
+	}
+
+	public void setCreated_at(Date created_at) {
+		this.created_at = created_at;
+	}
+
 	public NewJobs(int id, String jobTitle, String jobSummary, String jobDescription, String location, String industry,
 			String profession, String jobType, String careerLevel, String minExperience, String minQualification,
 			String salary, String deadlineDate) {
@@ -187,6 +207,11 @@ public class NewJobs {
 		this.minQualification = minQualification;
 		this.salary = salary;
 		this.deadlineDate = deadlineDate;
+	}
+
+	@Override
+	public String toString() {
+		return "NewJobs [created_at=" + created_at + "]";
 	}
 
 	public NewJobs() {
