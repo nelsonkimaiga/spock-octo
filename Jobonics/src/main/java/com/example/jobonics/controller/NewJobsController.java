@@ -25,11 +25,7 @@ public class NewJobsController {
 	@Autowired
 	private NewJobsService NJS;
 	
-<<<<<<< HEAD
 	@RequestMapping(value="/newjob",method=RequestMethod.GET)
-=======
-	@RequestMapping(value="/newjobs",method=RequestMethod.GET)
->>>>>>> 409636d55fbef2812a2dae2ab615dd805228b4ff
 	public String newRegistration(ModelMap model) {
 		NewJobs newJobs = new NewJobs();
 		model.addAttribute("newjobs",newJobs);
@@ -56,8 +52,6 @@ public class NewJobsController {
 		List<NewJobs> list=NJS.findAll();
 		return new ModelAndView("viewjobos","list",list);
 	}
-<<<<<<< HEAD
-=======
 	
 	/*
 	@RequestMapping(value="/editstudent/{id}")
@@ -75,7 +69,58 @@ public class NewJobsController {
 	public ModelAndView editsave(@ModelAttribute("newjobs") NewJobs p) {
 		
 		NewJobs newJobs=NJS.findOne(p.getId());
->>>>>>> 409636d55fbef2812a2dae2ab615dd805228b4ff
 		
+		newJobs.setFirstName(p.getFirstName());
+		newJobs.setLastName(p.getLastName());
+		newJobs.setCountry(p.getCountry());
+		newJobs.setEmail(p.getEmail());
+		newJobs.setSection(p.getSection());
+		newJobs.setSex(p.getSex());
+		
+		NJS.save(newJobs);
+		return new ModelAndView("redirect:/viewjobos");
+	}
+	
+	
+	*//*
+	
+	@RequestMapping(value="/deletestudent/{id}",method=RequestMethod.GET)
+	public ModelAndView delete(@PathVariable int id) {
+		NewJobs newJobs=NJS.findOne(id);
+		NJS.delete(newJobs);
+		return new ModelAndView("redirect:/viewjobos");
+	}
+	
+	*/
+/*
+	@ModelAttribute("sections")
+	public List<String> intializeSections(){
+		List<String> sections = new ArrayList<String>();
+		sections.add("Graduate");
+		sections.add("Post Graduate");
+		sections.add("Reasearch");
+		return sections;
+	}
+	*/
+	
+	/*
+	 * Method used to populate the country list in view. Note that here you can
+	 * call external systems to provide real data.
+	 *//*
+	@ModelAttribute("countries")
+	public List<String> initializeCountries() {
+		List<String> countries = new ArrayList<String>();
+		countries.add("INDIA");
+		countries.add("USA");
+		countries.add("CANADA");
+		countries.add("FRANCE");
+		countries.add("GERMANY");
+		countries.add("ITALY");
+		countries.add("OTHER");
+		return countries;
+	}
+	
+	*/
+	
 
 }
