@@ -8,15 +8,15 @@ import org.springframework.stereotype.Service;
 import com.example.jobonics.model.NewJobs;
 import com.example.jobonics.repository.NewJobsRepository;
 
-@Service
+@Service("newJobsService")
 public class NewJobsService {
 	@Autowired
 	NewJobsRepository newJobsRepository;
 	
 	/*to save an employee*/
 	
-	public NewJobs save(NewJobs std) {
-		return newJobsRepository.save(std);
+	public NewJobs save(NewJobs newJobs) {
+		return newJobsRepository.save(newJobs);
 	}
 	
 	
@@ -35,8 +35,8 @@ public class NewJobsService {
 	
 	/*delete an employee*/
 	
-	public void delete(NewJobs std) {
-		newJobsRepository.delete(std);
+	public void delete(NewJobs newJobs) {
+		newJobsRepository.delete(newJobs);
 	}
 	
 
