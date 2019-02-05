@@ -1,6 +1,5 @@
 package com.example.jobonics.model;
 
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EntityListeners;
@@ -8,15 +7,12 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import javax.persistence.TemporalType;
 
-import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.Type;
+
 import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
-import org.springframework.data.jpa.repository.Temporal;
-import org.springframework.format.annotation.DateTimeFormat;
-import java.util.Date;
+import java.sql.Date;
+import java.sql.Timestamp;
 
 @Entity
 @Table(name = "newjobs")
@@ -31,11 +27,10 @@ public class NewJobs {
 	@NotEmpty(message = "Please provide the job title")
 	private String jobTitle;
 
-	@Column(name = "job_summary")
+	@Column(name = "job_summary", length=1000)
 	private String jobSummary;
 
-	@Column(name = "job_description")
-
+	@Column(name = "job_description", length=1000)
 	private String jobDescription;
 
 	@Column(name = "location")
@@ -73,8 +68,7 @@ public class NewJobs {
 	@NotEmpty(message = "Please provide the Applications Deadline")
 	private String deadlineDate;
 	
-	@Column(name = "created_at", columnDefinition="datetime")
-	@Type(type="date")
+	@Column(name = "created_at", columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP", insertable=false, nullable=false)
 	private Date created_at;
 
 	public int getId() {
