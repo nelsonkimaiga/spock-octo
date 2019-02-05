@@ -276,14 +276,15 @@
 
                             <div class="project-list">
 
+                                <form:form>
                                 <table class="table table-hover">
                                     <tbody>
-                                    <tr>
+                                    <tr th:each="newjobs : ${list}">
                                         <td class="project-status">
                                             <span class="label label-primary">Active</span>
                                         </td>
-                                        <td class="project-title">
-                                            <a href="applications.html">Business Fellow</a>
+                                        <td class="project-title" th:text="${newjobs.JobTitle}">
+                                            <a href="applications.html"></a>
                                             <br/>
                                             <small>Created 14.08.2017</small>
                                         </td>
@@ -457,6 +458,7 @@
                                     </tr>
                                     </tbody>
                                 </table>
+                                </form:form>
                             </div>
                         </div>
                     </div>

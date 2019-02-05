@@ -14,15 +14,6 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 @Table(name = "newjobs")
 @EntityListeners(AuditingEntityListener.class)
 public class NewJobs {
-	/*
-	 * 10. New Job a. Job Title b. Job Summary c. Job description d. Share job on
-	 * free boards e. Share job on social media f. Location g. Industry h.
-	 * Profession i. Job type j. Career level k. Min years of experience l. Min
-	 * qualification m. Salary n. Application deadline
-	 * 
-	 * ///advise if this requires to be in this "new job"db table o. Save draft p.
-	 * Post job q. Cancel r. Success true or false
-	 */
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)

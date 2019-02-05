@@ -46,11 +46,11 @@ public class NewJobsController {
 	}
 	
 	
-	@RequestMapping(value="/viewjobos")
+	@RequestMapping(value="/openings")
 	public ModelAndView getAll() {
 		
 		List<NewJobs> list=NJS.findAll();
-		return new ModelAndView("viewjobos","list",list);
+		return new ModelAndView("openings","list",list);
 	}
 	
 	/*
