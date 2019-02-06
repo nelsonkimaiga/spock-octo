@@ -21,7 +21,7 @@
       <title>Jobonics-Where great talent is hired</title>
       <link rel="stylesheet" href="https://d33wubrfki0l68.cloudfront.net/bundles/0f4636b66db8be3f10afa1978acc8d2b036f6148.css">
       <link rel="stylesheet" media="print" href="https://d33wubrfki0l68.cloudfront.net/css/ba67551236ce4a9a186ba77a4aa3df7c4eec8732/css/plugins/fullcalendar/fullcalendar.print.css">
-      <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
       <link rel="stylesheet" href="https://d33wubrfki0l68.cloudfront.net/css/43c1878347528ab004845dbff2713d3a0ffaf64c/css/style.css">
       <script async="" src="//static.ads-twitter.com/uwt.js"></script><script type="text/javascript" async="" src="https://cdn.heapanalytics.com/js/heap-4286579790.js"></script><script async="" src="https://www.google-analytics.com/analytics.js"></script><script>!function(e,t,a,n,c,o,s){e.GoogleAnalyticsObject=c,e[c]=e[c]||function(){(e[c].q=e[c].q||[]).push(arguments)},e[c].l=1*new Date,o=t.createElement(a),s=t.getElementsByTagName(a)[0],o.async=1,o.src="https://www.google-analytics.com/analytics.js",s.parentNode.insertBefore(o,s)}(window,document,"script",0,"ga"),ga("create","UA-100946739-1","auto"),ga("send","pageview")</script><script type="text/javascript">window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var r=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(r?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(a,o);for(var n=["addEventProperties","addUserProperties","clearEventProperties","identify","removeEventProperty","setEventProperties","track","unsetEventProperty"],p=0;p<n.length;p++)heap[n[p]]=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(n[p])},heap.load("4286579790")</script>
       <link rel="stylesheet" href="https://d33wubrfki0l68.cloudfront.net/css/9cbfdb4ff790dc16bc55f15028699d636f3be843/static/css/main.f7bc042b.css">
@@ -143,12 +143,17 @@
                                        </div>
                                     </div>
                                     <div class="col-sm-8">
-                                       <h3 style="font-size: 16px; line-height: 20px; margin: 10px 0px;"><strong>th:with=" newjobs =${JobTitle}" </strong></h3>
-                                       <p>
-                                          <i class="fa fa-map-marker"></i><!-- react-text: 83 -->th:with=" newjobs =${location}"  <!-- /react-text --><br><i class="fa fa-map-marker"></i><!-- react-text: 86 --> newjobs.jobType <!-- /react-text --><br><i class="fa fa-map-marker"></i><!-- react-text: 89 --> Ksh. newjobs.salary <!-- /react-text -->
+                                       <h3 style="font-size: 16px; line-height: 20px; margin: 10px 0px;" th:text="${newjobs.JobTitle}"><strong> </strong></h3>
+                                       <p th:text="${newjobs.Location}">
+                                          <i class="fa fa-map-marker"></i><!-- react-text: 83 -->  <!-- /react-text --><br><i class="fa fa-map-marker"></i><!-- react-text: 86 --><!-- /react-text --><br><i class="fa fa-map-marker"></i><!-- react-text: 89 --> <!-- /react-text -->
                                        </p>
+                                       <p th:text="${newjobs.jobType}"></p></p>
+                                       <p th:text="'Kshs. ' + ${newjobs.salary}"></p></p>
                                        <address>
-                                          <strong>Min</strong><br><!-- react-text: 93 --> newjobs.minQualification <!-- /react-text --><br><!-- react-text: 95 --> newjobs.minExperience <!-- /react-text --><br>
+                                          <strong>Min</strong>
+                                          <br th:text="${newjobs.minQualification}"><!-- react-text: 93 -->  <!-- /react-text -->
+                                          <p th:text="${newjobs.minExperience} +' Years Experience'"><!-- react-text: 95 -->  <!-- /react-text -->
+                                          <br>
                                        </address>
                                     </div>
                                     <div class="clearfix"></div>
