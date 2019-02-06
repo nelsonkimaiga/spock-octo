@@ -37,7 +37,7 @@
          <div>
             <div>
                <div style="color: rgba(0, 0, 0, 0.87); background-color: rgb(0, 188, 212); transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms; box-sizing: border-box; font-family: Roboto, sans-serif; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px, rgba(0, 0, 0, 0.12) 0px 1px 4px; border-radius: 0px; position: fixed; z-index: 1100; width: 100%; display: flex; padding-left: 24px; padding-right: 24px; top: 0px; overflow: hidden; max-height: 57px;">
-                  <div style="margin-top: 8px; margin-right: 8px; margin-left: -16px;"><img th:src="@{/img/logo_s.ico" height="40px"></div>
+                  <div style="margin-top: 8px; margin-right: 8px; margin-left: -16px;"><></div>
                   <div style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin: 0px; padding-top: 0px; letter-spacing: 0px; font-size: 24px; font-weight: 400; color: rgb(255, 255, 255); height: 64px; line-height: 64px; flex: 1 1 0%;"><a class="logo-brand" href="/jobseeker" style="color: rgb(255, 255, 255);">Find A Job</a></div>
                   <div style="margin-top: 8px; margin-right: -16px; margin-left: auto;">
                      <div style="margin-left: 10px;">
@@ -105,8 +105,14 @@
                               <div class="third">
                                  <div class="width-full">
                                     <select class="width-full" name="searc_item">
-                                       <option value="1">Jobs</option>
-                                       <option value="2">Companies</option>
+                                        <option value="0">Select company</option>
+                                       <option value="1">Saf</option>
+                                       <option value="2">coke</option>
+                                       <option value="3">telkom</option>
+                                       <option value="4">orange</option>
+                                       <option value="5">zain</option>
+                                       <option value="6">airtel</option>
+                                       
                                     </select>
                                  </div>
                               </div>
@@ -125,8 +131,8 @@
                   </section>
                   <div>
                      <h2>Latest Jobs</h2>
-                     <div class="row">
-                        <div class="col-lg-4">
+                     <div class="row" >
+                        <div class="col-lg-4" th:each="newjobs : ${list}">
                            <div style="color: rgba(0, 0, 0, 0.87); background-color: rgb(255, 255, 255); transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms; box-sizing: border-box; font-family: Roboto, sans-serif; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px, rgba(0, 0, 0, 0.12) 0px 1px 4px; border-radius: 2px;">
                               <div class="contact-box">
                                  <a href="/profile">
@@ -137,12 +143,12 @@
                                        </div>
                                     </div>
                                     <div class="col-sm-8">
-                                       <h3 style="font-size: 16px; line-height: 20px; margin: 10px 0px;"><strong>Administration Assistant</strong></h3>
+                                       <h3 style="font-size: 16px; line-height: 20px; margin: 10px 0px;"><strong>th:with=" newjobs =${JobTitle}" </strong></h3>
                                        <p>
-                                          <i class="fa fa-map-marker"></i><!-- react-text: 83 --> Riviera State 32/106<!-- /react-text --><br><i class="fa fa-map-marker"></i><!-- react-text: 86 --> Fulltime<!-- /react-text --><br><i class="fa fa-map-marker"></i><!-- react-text: 89 --> Ksh. 20,000 - 27,000<!-- /react-text -->
+                                          <i class="fa fa-map-marker"></i><!-- react-text: 83 -->th:with=" newjobs =${location}"  <!-- /react-text --><br><i class="fa fa-map-marker"></i><!-- react-text: 86 --> newjobs.jobType <!-- /react-text --><br><i class="fa fa-map-marker"></i><!-- react-text: 89 --> Ksh. newjobs.salary <!-- /react-text -->
                                        </p>
                                        <address>
-                                          <strong>Min</strong><br><!-- react-text: 93 -->Bachelor's Degree<!-- /react-text --><br><!-- react-text: 95 -->2 Years Experience<!-- /react-text --><br>
+                                          <strong>Min</strong><br><!-- react-text: 93 --> newjobs.minQualification <!-- /react-text --><br><!-- react-text: 95 --> newjobs.minExperience <!-- /react-text --><br>
                                        </address>
                                     </div>
                                     <div class="clearfix"></div>
@@ -158,72 +164,11 @@
                               </div>
                            </div>
                         </div>
-                        <div class="col-lg-4">
-                           <div style="color: rgba(0, 0, 0, 0.87); background-color: rgb(255, 255, 255); transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms; box-sizing: border-box; font-family: Roboto, sans-serif; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px, rgba(0, 0, 0, 0.12) 0px 1px 4px; border-radius: 2px;">
-                              <div class="contact-box">
-                                 <a href="/profile">
-                                    <div class="col-sm-4">
-                                       <div class="text-center">
-                                          <img alt="image" class="/img-circle m-t-xs img-responsive" src="/img/a9.jpg">
-                                          <div class="m-t-xs font-bold">TressApp</div>
-                                       </div>
-                                    </div>
-                                    <div class="col-sm-8">
-                                       <h3 style="font-size: 16px; line-height: 20px; margin: 10px 0px;"><strong>Backend Developer</strong></h3>
-                                       <p>
-                                          <i class="fa fa-map-marker"></i><!-- react-text: 117 -->East Legon Accra<!-- /react-text --><br><i class="fa fa-map-marker"></i><!-- react-text: 120 --> Fulltime<!-- /react-text --><br><i class="fa fa-map-marker"></i><!-- react-text: 123 --> Ksh. 55,000 - 57,000<!-- /react-text -->
-                                       </p>
-                                       <address>
-                                          <strong>Min</strong><br><!-- react-text: 127 -->Bachelor's Degree<!-- /react-text --><br><!-- react-text: 129 -->4 Years Experience<!-- /react-text --><br>
-                                       </address>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                    <br>
-                                    <div style="color: rgba(0, 0, 0, 0.87); background-color: rgb(255, 255, 255); transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms; box-sizing: border-box; font-family: Roboto, sans-serif; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px, rgba(0, 0, 0, 0.12) 0px 1px 4px; border-radius: 2px; display: inline-block; min-width: 88px;">
-                                       <button tabindex="0" type="button" style="border: 10px; box-sizing: border-box; display: inline-block; font-family: Roboto, sans-serif; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); cursor: pointer; text-decoration: none; margin: 0px; padding: 0px; outline: none; font-size: inherit; font-weight: inherit; position: relative; z-index: 1; height: 36px; line-height: 36px; width: 100%; border-radius: 2px; transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms; background-color: rgb(255, 64, 129); text-align: center;">
-                                          <div>
-                                             <div style="height: 36px; border-radius: 2px; transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms; top: 0px;"><span style="position: relative; opacity: 1; font-size: 14px; letter-spacing: 0px; text-transform: uppercase; font-weight: 500; margin: 0px; user-select: none; padding-left: 16px; padding-right: 16px; color: rgb(255, 255, 255);">Apply Now</span></div>
-                                          </div>
-                                       </button>
-                                    </div>
-                                 </a>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="col-lg-4">
-                           <div style="color: rgba(0, 0, 0, 0.87); background-color: rgb(255, 255, 255); transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms; box-sizing: border-box; font-family: Roboto, sans-serif; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px, rgba(0, 0, 0, 0.12) 0px 1px 4px; border-radius: 2px;">
-                              <div class="contact-box">
-                                 <a href="/profile">
-                                    <div class="col-sm-4">
-                                       <div class="text-center">
-                                          <img alt="image" class="/img-circle m-t-xs img-responsive" src="/img/b4.jpg">
-                                          <div class="m-t-xs font-bold">LG Electronics</div>
-                                       </div>
-                                    </div>
-                                    <div class="col-sm-8">
-                                       <h3 style="font-size: 16px; line-height: 20px; margin: 10px 0px;"><strong>Sales Representative</strong></h3>
-                                       <p>
-                                          <i class="fa fa-map-marker"></i><!-- react-text: 151 --> Nakuru town<!-- /react-text --><br><i class="fa fa-map-marker"></i><!-- react-text: 154 --> Fulltime<!-- /react-text --><br><i class="fa fa-map-marker"></i><!-- react-text: 157 --> Ksh. 50,000 - 55,000<!-- /react-text -->
-                                       </p>
-                                       <address>
-                                          <strong>Min</strong><br><!-- react-text: 161 -->Bachelor's Degree<!-- /react-text --><br><!-- react-text: 163 -->4 Years Experience<!-- /react-text --><br>
-                                       </address>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                    <br>
-                                    <div style="color: rgba(0, 0, 0, 0.87); background-color: rgb(255, 255, 255); transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms; box-sizing: border-box; font-family: Roboto, sans-serif; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px, rgba(0, 0, 0, 0.12) 0px 1px 4px; border-radius: 2px; display: inline-block; min-width: 88px;">
-                                       <button tabindex="0" type="button" style="border: 10px; box-sizing: border-box; display: inline-block; font-family: Roboto, sans-serif; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); cursor: pointer; text-decoration: none; margin: 0px; padding: 0px; outline: none; font-size: inherit; font-weight: inherit; position: relative; z-index: 1; height: 36px; line-height: 36px; width: 100%; border-radius: 2px; transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms; background-color: rgb(255, 64, 129); text-align: center;">
-                                          <div>
-                                             <div style="height: 36px; border-radius: 2px; transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms; top: 0px;"><span style="position: relative; opacity: 1; font-size: 14px; letter-spacing: 0px; text-transform: uppercase; font-weight: 500; margin: 0px; user-select: none; padding-left: 16px; padding-right: 16px; color: rgb(255, 255, 255);">Apply Now</span></div>
-                                          </div>
-                                       </button>
-                                    </div>
-                                 </a>
-                              </div>
-                           </div>
-                        </div>
+                       
                      </div>
                   </div>
+                  
+                  
                   <div>
                      <h2>New Companies</h2>
                      <div class="row">

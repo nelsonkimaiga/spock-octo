@@ -20,38 +20,19 @@ import com.example.jobonics.service.NewJobsService;
 
 @Controller
 
-public class NewJobsController {
+public class JobseekerController {
 	
 	@Autowired
 	private NewJobsService NJS;
-	///posts new jobs
-	@RequestMapping(value="/newjob",method=RequestMethod.GET)
-	public String newRegistration(ModelMap model) {
-		NewJobs newJobs = new NewJobs();
-		model.addAttribute("newjobs",newJobs);
-		return "new_job";
-	}
 	
-	@RequestMapping(value="/save",method=RequestMethod.POST)
-	public String saveRegistration(@Valid NewJobs newJobs,BindingResult result,ModelMap model,RedirectAttributes redirectAttributes) {
-		
-		if(result.hasErrors()) {
-			System.out.println("has errors");
-			return "new_job";
-		}
+	///this just trial before i set up a query that will have two tables queried>>>company for the company name and logo
+	////jobs for the job desc
 	
-		NJS.save(newJobs);
-		///after new job creation....testing if the job appears in the job seekers UI
-		
-		return "redirect:/newjob";
-	}
-	
-	
-	@RequestMapping(value="/openings")
+	@RequestMapping(value="/jobseeker")
 	public ModelAndView getAll() {
 		
 		List<NewJobs> list=NJS.findAll();
-		return new ModelAndView("openings","list",list);
+		return new ModelAndView("jobseeker","list",list);
 	}
 
 }
