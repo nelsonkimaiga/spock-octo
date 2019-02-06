@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-JobonicAfrikaApplication<JobonicsAfrica>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.example.jobonics.JobonicAfrikaApplication",
+            "projectName": "JobonicsAfrica",
+            "args": ""
+        }
+    ]
+}
