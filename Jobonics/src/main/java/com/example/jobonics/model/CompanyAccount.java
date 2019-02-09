@@ -1,79 +1,47 @@
 package com.example.jobonics.model;
 
-import java.sql.Blob;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.EntityListeners;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
-import org.hibernate.validator.constraints.NotEmpty;
+import org.hibernate.annotations.Fetch;
+import org.hibernate.annotations.FetchMode;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 @Entity
 @Table(name = "company_account")
 @EntityListeners(AuditingEntityListener.class)
+
+@SecondaryTable(name = "company_profile")
 public class CompanyAccount {
-	/*
-	 * a. Company Name b. Phone Number c. Number of employees d. Company URL e.
-	 * Organisation Type f. Primary Industry g. Logo h. Location i. Date established
-	 * j. Headquarters k. Social Media
-	 * 
-	 */
-
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
-
-	@Column(name = "Company_Name")
-	// @NotEmpty(message = "Please provide the Specialties")
 	private String CompanyName;
-
-	@Column(name = "PhoneNumber")
 	private String PhoneNumber;
-
-	@Column(name = "Number_of_employees")
-
 	private String Number_of_employees;
-
-	@Column(name = "CompanyURL")
 	private String CompanyURL;
-
-	@Column(name = "OrganisationType")
-
 	private String OrganisationType;
-
-	@Column(name = "PrimaryIndustry")
-	// @NotEmpty(message = "Please provide the Vision")
 	private String PrimaryIndustry;
-
-	@Column(name = "Logo")
-	// @NotEmpty(message = "Please provide your job Values")
 	private byte[] Logo;
-
-	@Column(name = "Location")
-	// @NotEmpty(message = "Please provide Working with us")
 	private String Location;
-
-	@Column(name = "Date_established")
-	// @NotEmpty(message = "Please provide Working with us")
 	private String DateEstablished;
-
-	@Column(name = "Headquarters")
-	// @NotEmpty(message = "Please provide Working with us")
 	private String Headquarters;
-
-	@Column(name = "SocialMedia")
-	// @NotEmpty(message = "Please provide Working with us")
 	private String SocialMedia;
+	
 
+	
 	public CompanyAccount() {
-		// TODO Auto-generated constructor stub
 	}
 
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "company_account")
+	private List<NewJobs> jobs = new ArrayList<NewJobs>();
+
+	
+	@Id
+	// @org.hibernate.annotations.ColumnDefault("001")
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	public int getId() {
 		return id;
 	}
@@ -130,7 +98,14 @@ public class CompanyAccount {
 		PrimaryIndustry = primaryIndustry;
 	}
 
-	
+	public byte[] getLogo() {
+		return Logo;
+	}
+
+	public void setLogo(byte[] logo) {
+		Logo = logo;
+	}
+
 	public String getLocation() {
 		return Location;
 	}
@@ -164,7 +139,7 @@ public class CompanyAccount {
 	}
 
 	public CompanyAccount(int id, String companyName, String phoneNumber, String number_of_employees, String companyURL,
-			String organisationType, String primaryIndustry,  String location, String dateEstablished,
+			String organisationType, String primaryIndustry, byte[] logo, String location, String dateEstablished,
 			String headquarters, String socialMedia) {
 		super();
 		this.id = id;
@@ -174,31 +149,13 @@ public class CompanyAccount {
 		CompanyURL = companyURL;
 		OrganisationType = organisationType;
 		PrimaryIndustry = primaryIndustry;
-		
+		Logo = logo;
 		Location = location;
 		DateEstablished = dateEstablished;
 		Headquarters = headquarters;
 		SocialMedia = socialMedia;
+
 	}
 
-	public CompanyAccount(byte[] logo) {
-		super();
-		Logo = logo;
-	}
 
-	public byte[] getLogo() {
-		return Logo;
-	}
-
-	public void setLogo(byte[] logo) {
-		Logo = logo;
-	}
-
-	
-	
-	
-	
-	
-	
-	
 }

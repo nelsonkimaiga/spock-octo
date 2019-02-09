@@ -25,14 +25,18 @@ public class JobseekerController {
 	@Autowired
 	private NewJobsService NJS;
 	
-	///this just trial before i set up a query that will have two tables queried>>>company for the company name and logo
-	////jobs for the job desc
+	//the path /jobseeker takes you to the main page where we have the list of jobs and list of new companies 
+	//my next job is to work on the double querying of the tables "company" and "newjobs"
 	
 	@RequestMapping(value="/jobseeker")
 	public ModelAndView getAll() {
 		
 		List<NewJobs> list=NJS.findAll();
 		return new ModelAndView("jobseeker","list",list);
+		
 	}
+	
+	
+	
 
 }

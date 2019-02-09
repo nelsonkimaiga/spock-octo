@@ -26,6 +26,8 @@ public class CreateProfileController {
 	@Autowired
 	private CreateProfileService CPS;
 	
+	///this is for jobseekers to create their profile
+	
 	@RequestMapping(value="/newprofile",method=RequestMethod.GET)
 	public String newRegistration(ModelMap model) {
 		CreateProfile createprofile = new CreateProfile();
@@ -46,7 +48,7 @@ public class CreateProfileController {
 		return "redirect:/viewprofiles";
 	}
 	
-	
+	//redirected to a list of job seekers profiles////advise if ther are any necessar templates
 	@RequestMapping(value="/viewprofiles")
 	public ModelAndView getAll() {
 		
@@ -54,77 +56,5 @@ public class CreateProfileController {
 		return new ModelAndView("viewprofile","list",list);
 	}
 	
-	/*
-	@RequestMapping(value="/editprofile/{id}")
-	public String edit (@PathVariable int id,ModelMap model) {
-		
-		CreateProfile createprofile=CPS.findOne(id);
-		model.addAttribute("profile",createprofile);
-		return "editprofile";
-	}
-	*/
 	
-	////////////ngorireee
-	/*
-	@RequestMapping(value="/editsave",method=RequestMethod.POST)
-	public ModelAndView editsave(@ModelAttribute("profile") CreateProfile p) {
-		
-		CreateProfile createprofile=CPS.findOne(p.getId());
-		
-		createprofile.setFirstName(p.getFirstName());
-		createprofile.setLastName(p.getLastName());
-		createprofile.setCountry(p.getCountry());
-		createprofile.setEmail(p.getEmail());
-		createprofile.setSection(p.getSection());
-		createprofile.setSex(p.getSex());
-		
-		CPS.save(createprofile);
-		return new ModelAndView("redirect:/viewjobos");
-	}
-	
-	
-	*/
-	/*
-	
-	@RequestMapping(value="/deleteprofile/{id}",method=RequestMethod.GET)
-	public ModelAndView delete(@PathVariable int id) {
-		CreateProfile createprofile=CPS.findOne(id);
-		CPS.delete(createprofile);
-		return new ModelAndView("redirect:/viewjobos");
-	}
-	
-	
-
-	@ModelAttribute("sections")
-	public List<String> intializeSections(){
-		List<String> sections = new ArrayList<String>();
-		sections.add("Graduate");
-		sections.add("Post Graduate");
-		sections.add("Reasearch");
-		return sections;
-	}
-	/*
-	
-	/*
-	 * Method used to populate the country list in view. Note that here you can
-	 * call external systems to provide real data.
-	 *//*
-	@ModelAttribute("countries")
-	public List<String> initializeCountries() {
-
-		List<String> countries = new ArrayList<String>();
-		countries.add("INDIA");
-		countries.add("USA");
-		countries.add("CANADA");
-		countries.add("FRANCE");
-		countries.add("GERMANY");
-		countries.add("ITALY");
-		countries.add("OTHER");
-		return countries;
-	}
-
-	
-	*/
-	
-
 }

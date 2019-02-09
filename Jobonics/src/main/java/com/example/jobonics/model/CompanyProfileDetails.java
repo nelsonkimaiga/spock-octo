@@ -15,22 +15,13 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 @Table(name = "company_profile")
 @EntityListeners(AuditingEntityListener.class)
 public class CompanyProfileDetails {
-	/*
-	 * 10. New Job a. Job Title b. Job Summary c. Job description d. Share job on
-	 * free boards e. Share job on social media f. Location g. Industry h.
-	 * Profession i. Job type j. Career level k. Min years of experience l. Min
-	 * qualification m. Salary n. Application deadline
-	 * 
-	 * ///advise if this requires to be in this "new job"db table o. Save draft p.
-	 * Post job q. Cancel r. Success true or false
-	 */
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
 
 	@Column(name = "Specialties")
-	// @NotEmpty(message = "Please provide the Specialties")
+	 @NotEmpty(message = "Please provide the Specialties")
 	private String Specialties;
 
 	@Column(name = "Aboutus")
@@ -48,15 +39,15 @@ public class CompanyProfileDetails {
 	private String Mission;
 
 	@Column(name = "kompanyVision")
-	// @NotEmpty(message = "Please provide the Vision")
+	@NotEmpty(message = "Please provide the Vision")
 	private String Vision;
 
 	@Column(name = "kompanyValues")
-	// @NotEmpty(message = "Please provide your job Values")
+	@NotEmpty(message = "Please provide your job Values")
 	private String Values;
 
 	@Column(name = "WorkWithus")
-	// @NotEmpty(message = "Please provide Working with us")
+	@NotEmpty(message = "Please provide Working with us")
 	private String Workingwithus;
 
 	public int getId() {

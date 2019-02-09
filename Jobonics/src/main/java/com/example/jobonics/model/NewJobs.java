@@ -1,40 +1,50 @@
 package com.example.jobonics.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.EntityListeners;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import java.sql.Date;
+import java.util.HashSet;
+import java.util.Set;
 
+import javax.persistence.*;
 
 import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
-import java.sql.Date;
-import java.sql.Timestamp;
 
 @Entity
 @Table(name = "newjobs")
 @EntityListeners(AuditingEntityListener.class)
 public class NewJobs {
-
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private int id;
+	@org.hibernate.annotations.ColumnDefault("001")
+	private int newjobid;
+
+	public NewJobs() {
+	}
 
 	@Column(name = "JobTitle")
 	@NotEmpty(message = "Please provide the job title")
 	private String jobTitle;
 
-	@Column(name = "job_summary", length=1000)
+	@Column(name = "job_summary", length = 1000)
 	private String jobSummary;
 
-	@Column(name = "job_description", length=1000)
+	@Column(name = "job_description", length = 1000)
 	private String jobDescription;
 
 	@Column(name = "location")
 	private String Location;
+
+	@Column(name = "career_level")
+	@NotEmpty(message = "Please provide career level required")
+	private String careerLevel;
+
+	public String getCareerLevel() {
+		return careerLevel;
+	}
+
+	public void setCareerLevel(String careerLevel) {
+		this.careerLevel = careerLevel;
+	}
 
 	@Column(name = "industry")
 
@@ -46,16 +56,12 @@ public class NewJobs {
 
 	@Column(name = "jobtype")
 	@NotEmpty(message = "Please provide your job type")
+
 	private String jobType;
-
-	@Column(name = "career_level")
-	@NotEmpty(message = "Please provide career level required")
-	private String careerLevel;
-
 	@Column(name = "min_experience")
 	@NotEmpty(message = "Please provide the Min years of experience")
-	private String minExperience;
 
+	private String minExperience;
 	@Column(name = "min_qualification")
 	@NotEmpty(message = "Please provide the Min Qualifications")
 	private String minQualification;
@@ -67,16 +73,16 @@ public class NewJobs {
 	@Column(name = "deadline_date")
 	@NotEmpty(message = "Please provide the Applications Deadline")
 	private String deadlineDate;
-	
-	@Column(name = "created_at", columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP", insertable=false, nullable=false)
+
+	@Column(name = "created_at", columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP", insertable = false, nullable = false)
 	private Date created_at;
 
-	public int getId() {
-		return id;
+	public long getNewjobid() {
+		return newjobid;
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public void setNewjobid(int newjobid) {
+		this.newjobid = newjobid;
 	}
 
 	public String getJobTitle() {
@@ -102,7 +108,6 @@ public class NewJobs {
 	public void setJobDescription(String jobDescription) {
 		this.jobDescription = jobDescription;
 	}
-
 
 	public String getLocation() {
 		return Location;
@@ -134,14 +139,6 @@ public class NewJobs {
 
 	public void setJobType(String jobType) {
 		this.jobType = jobType;
-	}
-
-	public String getCareerLevel() {
-		return careerLevel;
-	}
-
-	public void setCareerLevel(String careerLevel) {
-		this.careerLevel = careerLevel;
 	}
 
 	public String getMinExperience() {
@@ -184,33 +181,31 @@ public class NewJobs {
 		this.created_at = created_at;
 	}
 
-	public NewJobs(int id, String jobTitle, String jobSummary, String jobDescription, String location, String industry,
-			String profession, String jobType, String careerLevel, String minExperience, String minQualification,
-			String salary, String deadlineDate) {
+	public NewJobs(int newjobid, String jobTitle, String jobSummary, String jobDescription, String location,
+			String careerLevel, String industry, String profession, String jobType, String minExperience,
+			String minQualification, String salary, String deadlineDate, Date created_at) {
 		super();
-		this.id = id;
+		this.newjobid = (int) newjobid;
 		this.jobTitle = jobTitle;
 		this.jobSummary = jobSummary;
 		this.jobDescription = jobDescription;
 		Location = location;
+		this.careerLevel = careerLevel;
 		this.industry = industry;
 		this.profession = profession;
 		this.jobType = jobType;
-		this.careerLevel = careerLevel;
 		this.minExperience = minExperience;
 		this.minQualification = minQualification;
 		this.salary = salary;
 		this.deadlineDate = deadlineDate;
+		this.created_at = created_at;
+
 	}
 
-	@Override
-	public String toString() {
-		return "NewJobs [created_at=" + created_at + "]";
-	}
-
-	public NewJobs() {
-		// TODO Auto-generated constructor stub
-	}
-	
+	@ManyToOne(fetch = FetchType.LAZY)
+	// @JoinColumn(name = "company_account")
+	@JoinTable(name = "company_jobs", joinColumns = { @JoinColumn(name = "id") }, inverseJoinColumns = {
+			@JoinColumn(name = "newjobid") })
+	private CompanyAccount CompanyAccount;
 
 }

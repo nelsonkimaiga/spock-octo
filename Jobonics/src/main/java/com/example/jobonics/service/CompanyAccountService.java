@@ -15,7 +15,7 @@ public class CompanyAccountService {
 	@Autowired
 	CompanyAccountRepository CAR;
 	
-	/*to save an employee*/
+	/*to save an company account*/
 	
 	public CompanyAccount save(CompanyAccount std) {
 		return CAR.save(std);
@@ -29,13 +29,13 @@ public class CompanyAccountService {
 	}
 	
 	
-	/*get an employee by id*/
+	/*get an company account by id*/
 	public CompanyAccount findOne(Integer id) {
 		return CAR.findOne(id);
 	}
 	
 	
-	/*delete an employee*/
+	/*delete an company account*/
 	
 	public void delete(CompanyAccount std) {
 		CAR.delete(std);

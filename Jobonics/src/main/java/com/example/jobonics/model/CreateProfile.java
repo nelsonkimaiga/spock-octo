@@ -12,7 +12,7 @@ import javax.persistence.Table;
 import org.hibernate.validator.constraints.NotEmpty;
 
 @Entity
-@Table(name = "hustlers_profile")
+@Table(name = "jobseeker_profile")
 public class CreateProfile {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -20,7 +20,7 @@ public class CreateProfile {
 	private int id;
 
 	@Column(name = "full_name")
-	//@NotEmpty(message = "Please provide your full names")
+	@NotEmpty(message = "Please provide your full names")
 	private String fullname;
 
 	@Column(name = "profpic")
@@ -28,35 +28,35 @@ public class CreateProfile {
 	private byte[] profPic;
 
 	@Column(name = "Aboutme")
-	//@NotEmpty(message = "Please provide deatils about you")
+	@NotEmpty(message = "Please provide deatils about you")
 	private String aboutMe;
 
 	@Column(name = "current_Position")
-	//@NotEmpty(message = "Please provide your Current Position and Company")
+	@NotEmpty(message = "Please provide your Current Position and Company")
 	private String currentPosition;
 
 	@Column(name = "work_experience")
-	//@NotEmpty(message = "Please provide your work experience")
+	@NotEmpty(message = "Please provide your work experience")
 	private String workExperience;
 
 	@Column(name = "education")
-	//@NotEmpty(message = "Please provide your Academics Details")
+	@NotEmpty(message = "Please provide your Academics Details")
 	private String education;
 
 	@Column(name = "contacts")
-	//@NotEmpty(message = "Please provide your Contact")
+	@NotEmpty(message = "Please provide your Contact")
 	private String contacts;
 
 	@Column(name = "skills")
-	//@NotEmpty(message = "Please provide your skills")
+	@NotEmpty(message = "Please provide your skills")
 	private String skills;
 
 	@Column(name = "intrests")
-	//@NotEmpty(message = "Please provide your full names")
+	@NotEmpty(message = "Please provide your full names")
 	private String intrests;
 
 	@Column(name = "reviews")
-	//@NotEmpty(message = "Please provide your reviews")
+	@NotEmpty(message = "Please provide your reviews")
 	private String reviews;
 
 	@Column(name = "awards")

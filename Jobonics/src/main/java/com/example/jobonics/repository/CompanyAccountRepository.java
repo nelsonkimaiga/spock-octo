@@ -8,4 +8,6 @@ import com.example.jobonics.model.CreateProfile;
 
 public interface CompanyAccountRepository extends JpaRepository<CompanyAccount, Integer> {
 
+	CompanyAccount findOne(int id);
+
 }

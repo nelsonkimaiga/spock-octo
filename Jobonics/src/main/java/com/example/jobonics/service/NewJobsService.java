@@ -13,7 +13,7 @@ public class NewJobsService {
 	@Autowired
 	NewJobsRepository newJobsRepository;
 	
-	/*to save an employee*/
+	/*to save an jobs*/
 	
 	public NewJobs save(NewJobs newJobs) {
 		return newJobsRepository.save(newJobs);
@@ -27,17 +27,20 @@ public class NewJobsService {
 	}
 	
 	
-	/*get an employee by id*/
-	public NewJobs findOne(Integer id) {
-		return newJobsRepository.findOne(id);
+	/*get an jobs by id*/
+	public NewJobs findOne(Integer newjobid) {
+		return newJobsRepository.findOne(newjobid);
 	}
 	
-	
-	/*delete an employee*/
+	/*delete an jobs*/
 	
 	public void delete(NewJobs newJobs) {
 		newJobsRepository.delete(newJobs);
 	}
+	
+	/*searching the jobs and displaying with company details*/
+	
+	
 	
 
 }
