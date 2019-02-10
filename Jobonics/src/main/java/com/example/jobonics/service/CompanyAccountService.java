@@ -22,7 +22,7 @@ public class CompanyAccountService {
 	}
 	
 	
-	/* search all employees*/
+	/* search all company account*/
 	
 	public List<CompanyAccount> findAll(){
 		return CAR.findAll();

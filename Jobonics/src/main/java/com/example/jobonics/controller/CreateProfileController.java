@@ -35,6 +35,7 @@ public class CreateProfileController {
 		return "newprofile";
 	}
 	
+	///save jobseekers profile
 	@RequestMapping(value="/saveprofiles",method=RequestMethod.POST)
 	public String saveRegistration(@Valid CreateProfile createprofile,BindingResult result,ModelMap model,RedirectAttributes redirectAttributes) {
 		

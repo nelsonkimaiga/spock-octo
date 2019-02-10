@@ -7,7 +7,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "role")
-public class Role2 {
+public class RoleRecruiter {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "role_id")

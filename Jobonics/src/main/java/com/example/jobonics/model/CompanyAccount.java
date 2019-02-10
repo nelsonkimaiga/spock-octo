@@ -40,7 +40,7 @@ public class CompanyAccount {
 
 	
 	@Id
-	// @org.hibernate.annotations.ColumnDefault("001")
+	 @org.hibernate.annotations.ColumnDefault("001")
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	public int getId() {
 		return id;
