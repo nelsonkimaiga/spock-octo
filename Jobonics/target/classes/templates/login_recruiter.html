@@ -1,37 +1,72 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+   <head>
+      <meta charset="utf-8">
+      <link rel="manifest" href="/manifest.json">
+      <link rel="shortcut icon" sizes="16x16 32x32" type="image/x-icon" href="/favicon.png">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta name="description" content="Where great talent is hired. Jobonics is the No.1 leading recruiting solution for employers to  reach, engage and hire top talent in an easy &amp; fast way">
+      <meta name="keywords" content="Jobonics,jobs,jobseekers, jobsearch,employers,companies,recruiting,recruit,hiring,HR,hire,new job,job,talent">
+      <meta name="author" content="CEO Jobonics">
+      <meta name="robots" content="noarchive">
+      <meta name="referrer" content="origin-when-cross-origin">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <meta name="viewport" content="maximum-scale=1,width=device-width,initial-scale=1,user-scalable=0">
+      <meta property="og:site_name" content="Jobonics">
+      <meta property="og:type" content="website">
+      <meta property="og:url" content="www.jobonics.com">
+      <meta property="og:description" content="Where great talent is hired. Jobonics is the No.1 leading recruiting solution for employers to reach, engage and hire top talent in an easy &amp; fast way">
+      <meta property="twitter:site" content="@JobonicsHR">
+      <title>Jobonics-Where great talent is hired</title>
 
-<head>
-    <title>Spring Security Tutorial</title>
-   
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
+      <!-- bootstrap core css -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-<body>
-<form th:action="@{/registration}" method="get">
-    <button class="btn btn-md btn-warning btn-block" type="Submit">Go To Registration Page</button>
-</form>
+      <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      
+      <script type="text/javascript" async="" src="http://cdn.heapanalytics.com/js/heap-4286579790.js"></script><script async="" src="https://www.google-analytics.com/analytics.js"></script><script async="" src="//static.ads-twitter.com/uwt.js"></script><script type="text/javascript" async="" src="https://cdn.heapanalytics.com/js/heap-4286579790.js"></script><script async="" src="https://www.google-analytics.com/analytics.js"></script><script>!function(e,t,a,n,c,o,s){e.GoogleAnalyticsObject=c,e[c]=e[c]||function(){(e[c].q=e[c].q||[]).push(arguments)},e[c].l=1*new Date,o=t.createElement(a),s=t.getElementsByTagName(a)[0],o.async=1,o.src="https://www.google-analytics.com/analytics.js",s.parentNode.insertBefore(o,s)}(window,document,"script",0,"ga"),ga("create","UA-100946739-1","auto"),ga("send","pageview")</script><script type="text/javascript">window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var r=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(r?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(a,o);for(var n=["addEventProperties","addUserProperties","clearEventProperties","identify","removeEventProperty","setEventProperties","track","unsetEventProperty"],p=0;p<n.length;p++)heap[n[p]]=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(n[p])},heap.load("4286579790")</script>
 
-<div class="container">
-    <img th:src="@{/images/login.jpg}" class="img-responsive center-block" width="300" height="300" alt="Logo"/>
-    <form th:action="@{/login_recruiter}" method="POST" class="form-signin">
-        <h3 class="form-signin-heading" th:text="Welcome"></h3>
-        <br/>
+       <!-- Custom styles-->
+      <link th:href="@{css/login.css}" rel="stylesheet">
 
-        <input type="text" id="email" name="email" th:placeholder="Email"
-               class="form-control"/> <br/>
-        <input type="password" th:placeholder="Password"
-               id="password" name="password" class="form-control"/> <br/>
-
-        <div align="center" th:if="${param.error}">
-            <p style="font-size: 20; color: #FF1C19;">Email or Password invalid, please verify</p>
+   </head>
+   <body class="text-center">
+    <form class="form-signin" th:action="@{/login_recruiter}" method="POST">
+      <a href="/"><img class="mb-4" th:src="@{/img/jobonic-logo-psd.png}"/></a>
+      <h5 class="h5">Login to your Jobonics Recruiter account</h5>
+      <label for="inputEmail" class="sr-only">Email address</label>
+        <input type="email" id="email" name="email" class="form-control" th:placeholder="Email" required autofocus>
+      <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" id="password" name="password" class="form-control" th:placeholder="Password" required>
+      <div class="checkbox mb-3">
+        <label>
+          <input type="checkbox" value="remember-me"> Remember me
+        </label>
+      </div>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">LOGIN</button>
+      <br>
+      <div style="text-align: center;"><i class="fa fa-question-circle" aria-hidden="true" style="color: #ef6c00;"></i> <a href="" style="color: #ef6c00; line-height: 36px; font-weight: bold;">FORGOT PASSWORD?</a></div>
+      <br>
+      <div class="container" style="text-align: center;">
+        <div class="row">
+          <div class="col-sm">
+            New to Jobonics?
+          </div>
+          <div class="col-sm">
+            <a th:href="@{/registration}" style="color: #ef6c00; font-weight: bold; font-size: 12px;">SIGNUP AS RECRUITER</a>
+          </div>
+          <div class="col-sm">
+            <a href="" style="color: #ef6c00; font-weight: bold; font-size: 12px; text-align: center;">SIGNUP AS JOBSEEKER</a>
+          </div>
         </div>
-        <button class="btn btn-lg btn-primary btn-block" name="Submit" value="Login" type="Submit"
-                th:text="Login"></button>
+      </div>
+            <p class="mt-5 mb-3 text-muted">&copy;
+                <script type="text/javascript">
+                    document.write(new Date().getFullYear());
+                </script>
+            </p>
     </form>
-</div>
-</body>
+  </body>
 </html>

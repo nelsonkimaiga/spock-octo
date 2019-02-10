@@ -141,7 +141,8 @@ public class RecruitController {
 		recruiterService.saveRecruiter(recruiter);
 		
 		modelAndView.addObject("successMessage", "Your password has been set!");
-		return modelAndView;		
+		return modelAndView;
+			
 	}
 	
 }
