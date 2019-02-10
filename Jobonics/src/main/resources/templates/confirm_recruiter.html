@@ -10,7 +10,7 @@
 <meta name="author" content="" />
 <link rel="icon" href="favicon.ico" />
 
-<title>Jobocnics | Account Confirmation</title>
+<title>Jobonics | Recruiter Account Confirmation</title>
 <!-- Bootstrap core CSS -->
 <link
 	href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
@@ -47,7 +47,7 @@
 
 			<form th:if="!${invalidToken}" class="m-t" id="passwordForm"
 				role="form" action="#" th:object="${setPassword}"
-				th:action="@{/confirm}" method="post">
+				th:action="@{/confirm_recruiter}" method="post">
 
 				<input type="hidden" name="token" th:value=${confirmationToken}>
 

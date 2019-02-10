@@ -11,7 +11,7 @@
 <meta name="author" content="" />
 <link rel="icon" href="favicon.ico" />
 
-<title>Jobonics | Register</title>
+<title>Jobonics | Register as a Jobseeker</title>
 
 <!-- Bootstrap core CSS -->
 <link
@@ -34,11 +34,11 @@
 		<div>
 			<div>
 
-				<img src="img/jobonic-logo-psd.png">
+				<a href="/"><img src="img/jobonic-logo-psd.png"></a>
 
 			</div>
-			<h3>Register to Jobonics</h3>
-			<form autocomplete="off" action="#" th:action="@{/register}"
+			<h3>Register to Jobonics as a Jobseeker</h3>
+			<form autocomplete="off" action="#" th:action="@{/signup_jobseeker}"
 				th:object="${user}" method="post" class="m-t" role="form"
 				data-toggle="validator">
 					

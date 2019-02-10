@@ -47,7 +47,10 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         http.
                 authorizeRequests()
                 .antMatchers("/").permitAll()
-                .antMatchers("/login2").permitAll()
+                .antMatchers("/confirm").permitAll()
+                .antMatchers("/confirm_recruiter").permitAll()
+                .antMatchers("/signup_jobseeker").permitAll()
+                .antMatchers("/signup_employer").permitAll()
                 .antMatchers("/registration").permitAll()
                 .antMatchers("/admin/**").hasAuthority("ADMIN").anyRequest()
                 .authenticated().and().csrf().disable().formLogin()
@@ -63,9 +66,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     @Override
     public void configure(WebSecurity web) throws Exception {
-        web
-                .ignoring()
-                .antMatchers("/resources/**", "/static/**", "/css/**", "/js/**", "/images/**");
+        web.ignoring().antMatchers("/resources/**", "/static/**", "/css/**", "/email_templates/**", "/error/**", "/font-awesome/**", "/fonts/**", "/res/**", "/vendor/**", "/js/**", "/img/**");
     }
 
 }
