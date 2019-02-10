@@ -14,27 +14,27 @@ public class CompanyProfileDetailsService {
 	@Autowired
 	CompanyProfileDetailsRepository CPR;
 	
-	/*to save an employee*/
+	/*to save an company profile*/
 	
 	public CompanyProfileDetails save(CompanyProfileDetails std) {
 		return CPR.save(std);
 	}
 	
 	
-	/* search all employees*/
+	/* search all company profile*/
 	
 	public List<CompanyProfileDetails> findAll(){
 		return CPR.findAll();
 	}
 	
 	
-	/*get an employee by id*/
+	/*get an company profile by id*/
 	public CompanyProfileDetails findOne(Integer id) {
 		return CPR.findOne(id);
 	}
 	
 	
-	/*delete an employee*/
+	/*delete an company profile*/
 	
 	public void delete(CompanyProfileDetails std) {
 		CPR.delete(std);

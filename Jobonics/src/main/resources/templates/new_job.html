@@ -118,7 +118,8 @@
         </div>
             <ul class="nav navbar-top-links navbar-right">
                 <li>
-                    <span class="m-r-sm text-muted welcome-message" th:value="${userName}" ></span>
+                    <span class="m-r-sm text-muted welcome-message" ></span>
+                     <span th:utext="${userName}"></span>
                 </li>
                
                 <li class="dropdown">
@@ -248,6 +249,7 @@
                     <div class="ibox float-e-margins">
                         <div class="ibox-title">
                             <h5>All form elements <small>With custom checbox and radion elements.</small></h5>
+                              
                             <div class="ibox-tools">
                                 <a class="collapse-link">
                                     <i class="fa fa-chevron-up"></i>
@@ -266,8 +268,9 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="ibox-content">
-                            <form  class="form-horizontal"  th:action="@{/save}" th:object="${newjobs}" method="post">
+                        <div class="ibox-content"  >
+                        
+                         <form  class="form-horizontal"  th:action="@{/save}" th:object="${newjobs}" method="post">
                                 <div class="form-group"><label class="col-sm-3 control-label">Job Title</label>
                                 
                                     <div class="col-sm-7"><input type="text" class="form-control" th:field="*{JobTitle}"></div>
@@ -366,6 +369,7 @@
                                     </div>
                                 </div>
                             </form>
+    
                         </div>
                     </div>
                 </div>

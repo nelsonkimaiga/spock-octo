@@ -32,6 +32,8 @@ public class CompanyAccountController {
 		return "kampunaccount";
 	}
 
+	
+	///saving company account list
 	@RequestMapping(value = "/savekompanyaccount", method = RequestMethod.POST)
 	public String saveRegistration(@Valid CompanyAccount createprofile, BindingResult result, ModelMap model,
 			RedirectAttributes redirectAttributes) {
@@ -46,6 +48,8 @@ public class CompanyAccountController {
 		return "redirect:/viewkompanyaccount";
 	}
 
+	
+	//company accounts list
 	@RequestMapping(value = "/viewkompanyaccount")
 	public ModelAndView getAll() {
 

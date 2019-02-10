@@ -25,9 +25,11 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
 		return resolver;
 	}
 
+	
 	@Override
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
-		registry.addResourceHandler("/resources/**").addResourceLocations("/resources/**");
+	  if (!registry.hasMappingForPattern("/static/**")) {
+	     registry.addResourceHandler("/resources/**").addResourceLocations("classpath:/static/");
+	  }
 	}
-
 }

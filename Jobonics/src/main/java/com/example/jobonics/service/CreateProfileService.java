@@ -13,27 +13,27 @@ public class CreateProfileService {
 	@Autowired
 	CreateProfileRepository CPR;
 	
-	/*to save an employee*/
+	/*to save an cps*/
 	
 	public CreateProfile save(CreateProfile std) {
 		return CPR.save(std);
 	}
 	
 	
-	/* search all employees*/
+	/* search all cps*/
 	
 	public List<CreateProfile> findAll(){
 		return CPR.findAll();
 	}
 	
 	
-	/*get an employee by id*/
+	/*get an cps by id*/
 	public CreateProfile findOne(Integer id) {
 		return CPR.findOne(id);
 	}
 	
 	
-	/*delete an employee*/
+	/*delete an cps*/
 	
 	public void delete(CreateProfile std) {
 		CPR.delete(std);

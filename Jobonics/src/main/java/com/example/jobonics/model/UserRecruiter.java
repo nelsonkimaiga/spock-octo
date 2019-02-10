@@ -12,7 +12,7 @@ import java.util.Set;
 
 @Entity
 @Table(name = "user2")
-public class User2 {
+public class UserRecruiter {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -42,7 +42,7 @@ public class User2 {
     
     @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(name = "user2_role", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "role_id"))
-    private Set<Role2> roles;
+    private Set<RoleRecruiter> roles;
     
 	public int getId() {
 		return id;
@@ -80,10 +80,10 @@ public class User2 {
 	public void setActive(int active) {
 		this.active = active;
 	}
-	public Set<Role2> getRoles() {
+	public Set<RoleRecruiter> getRoles() {
 		return roles;
 	}
-	public void setRoles(Set<Role2> roles) {
+	public void setRoles(Set<RoleRecruiter> roles) {
 		this.roles = roles;
 	}
 

@@ -23,7 +23,7 @@ public class CompanyProfileDetailsController {
 
 	@Autowired
 	private CompanyProfileDetailsService CPDS;
-
+///create comp profile
 	@RequestMapping(value = "/kompanyprofile", method = RequestMethod.GET)
 	public String newRegistration(ModelMap model) {
 		CompanyProfileDetails createprofile = new CompanyProfileDetails();

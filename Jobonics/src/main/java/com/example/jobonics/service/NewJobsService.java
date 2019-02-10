@@ -20,7 +20,7 @@ public class NewJobsService {
 	}
 	
 	
-	/* search all employees*/
+	/* search all jobs*/
 	
 	public List<NewJobs> findAll(){
 		return newJobsRepository.findAll();
