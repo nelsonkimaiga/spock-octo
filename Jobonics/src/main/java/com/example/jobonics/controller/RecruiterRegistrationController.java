@@ -65,7 +65,7 @@ public class RecruiterRegistrationController{
             userRecruiterService.createUserAccount(accountDto);
             modelAndView.addObject("successMessage", "User has been registered successfully");
             modelAndView.addObject("user", new UserRecruiter());
-            modelAndView.setViewName("successRegister");
+            modelAndView.setViewName("success");
             LOGGER.debug("Registering user account with information: {}", accountDto);
         }
         return modelAndView;
