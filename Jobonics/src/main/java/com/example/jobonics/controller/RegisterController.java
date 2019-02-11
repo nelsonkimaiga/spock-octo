@@ -80,10 +80,8 @@ public class RegisterController {
 			registrationEmail.setSubject("Registration Confirmation");
 			registrationEmail.setText("To confirm your e-mail address, please click the link below:\n"
 					+ appUrl + "/confirm?token=" + user.getConfirmationToken());
-			registrationEmail.setFrom("noreply@domain.com");
-			
+			registrationEmail.setFrom("noreply@jobonics.com");
 			emailService.sendEmail(registrationEmail);
-			
 			modelAndView.addObject("confirmationMessage", "A confirmation e-mail has been sent to " + user.getEmail());
 			modelAndView.setViewName("register");
 		}
@@ -127,7 +125,7 @@ public class RegisterController {
 			System.out.println(requestParams.get("token"));
 			return modelAndView;
 		}
-	
+
 		// Find the user associated with the reset token
 		User user = userService.findByConfirmationToken(requestParams.get("token"));
 

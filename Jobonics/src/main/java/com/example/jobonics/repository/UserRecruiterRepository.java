@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 
 import com.example.jobonics.model.UserRecruiter;
 
-@Repository("user2Repository")
+@Repository("userRecruiterRepository")
 public interface UserRecruiterRepository extends JpaRepository<UserRecruiter, Long> {
     UserRecruiter findByEmail(String email);
 }

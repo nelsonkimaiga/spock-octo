@@ -1,9 +1,6 @@
 package com.example.jobonics.model;
 
-
-
 import javax.persistence.*;
-
 
 @Entity
 @Table(name = "role")
