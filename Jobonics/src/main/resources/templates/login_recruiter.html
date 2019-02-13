@@ -24,25 +24,30 @@
       <!-- bootstrap core css -->
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-      <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
       
-      <script type="text/javascript" async="" src="http://cdn.heapanalytics.com/js/heap-4286579790.js"></script><script async="" src="https://www.google-analytics.com/analytics.js"></script><script async="" src="//static.ads-twitter.com/uwt.js"></script><script type="text/javascript" async="" src="https://cdn.heapanalytics.com/js/heap-4286579790.js"></script><script async="" src="https://www.google-analytics.com/analytics.js"></script><script>!function(e,t,a,n,c,o,s){e.GoogleAnalyticsObject=c,e[c]=e[c]||function(){(e[c].q=e[c].q||[]).push(arguments)},e[c].l=1*new Date,o=t.createElement(a),s=t.getElementsByTagName(a)[0],o.async=1,o.src="https://www.google-analytics.com/analytics.js",s.parentNode.insertBefore(o,s)}(window,document,"script",0,"ga"),ga("create","UA-100946739-1","auto"),ga("send","pageview")</script><script type="text/javascript">window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var r=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(r?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(a,o);for(var n=["addEventProperties","addUserProperties","clearEventProperties","identify","removeEventProperty","setEventProperties","track","unsetEventProperty"],p=0;p<n.length;p++)heap[n[p]]=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(n[p])},heap.load("4286579790")</script>
+      <script type="text/javascript" src="http://cdn.heapanalytics.com/js/heap-4286579790.js"></script>
+      <script src="https://www.google-analytics.com/analytics.js"></script>
+      <script src="//static.ads-twitter.com/uwt.js"></script>
+      <script type="text/javascript" src="https://cdn.heapanalytics.com/js/heap-4286579790.js"></script>
+      <script src="https://www.google-analytics.com/analytics.js"></script>
+      <script>!function(e,t,a,n,c,o,s){e.GoogleAnalyticsObject=c,e[c]=e[c]||function(){(e[c].q=e[c].q||[]).push(arguments)},e[c].l=1*new Date,o=t.createElement(a),s=t.getElementsByTagName(a)[0],o.async=1,o.src="https://www.google-analytics.com/analytics.js",s.parentNode.insertBefore(o,s)}(window,document,"script",0,"ga"),ga("create","UA-100946739-1","auto"),ga("send","pageview")</script>
+      <script type="text/javascript">window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var r=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(r?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(a,o);for(var n=["addEventProperties","addUserProperties","clearEventProperties","identify","removeEventProperty","setEventProperties","track","unsetEventProperty"],p=0;p<n.length;p++)heap[n[p]]=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(n[p])},heap.load("4286579790")</script>
 
        <!-- Custom styles-->
-      <link th:href="@{css/login.css}" rel="stylesheet">
-
+      <link th:href="@{/resources/css/login.css}" rel="stylesheet"/>
    </head>
    <body class="text-center">
-    <form class="form-signin" th:action="@{/login_recruiter}" method="POST">
-      <a href="/"><img class="mb-4" th:src="@{/img/jobonic-logo-psd.png}"/></a>
+    <form class="form-signin" th:action="@{/login}" method="POST">
+      <a href="/"><img class="mb-4" th:src="@{/resources/img/jobonic-logo-psd.png}"/></a>
       <h5 class="h5">Login to your Jobonics Recruiter account</h5>
       <label for="inputEmail" class="sr-only">Email address</label>
-        <input type="email" id="email" name="email" class="form-control" th:placeholder="Email" required autofocus>
+      <input type="email" id="login-email" name="email" class="form-control" th:placeholder="Email" required autofocus>
       <label for="inputPassword" class="sr-only">Password</label>
-        <input type="password" id="password" name="password" class="form-control" th:placeholder="Password" required>
+      <input type="password" id="login-password" name="password" class="form-control" th:placeholder="Password" required>
       <div class="checkbox mb-3">
         <label>
-          <input type="checkbox" value="remember-me"> Remember me
+          <input id="login-remember" type="checkbox" name="remember-me" value="1"> Remember me
         </label>
       </div>
       <button class="btn btn-lg btn-primary btn-block" type="submit">LOGIN</button>
@@ -55,10 +60,16 @@
             New to Jobonics?
           </div>
           <div class="col-sm">
-            <a th:href="@{/registration}" style="color: #ef6c00; font-weight: bold; font-size: 12px;">SIGNUP AS RECRUITER</a>
+            <a style="color: #ef6c00; font-weight: bold; font-size: 12px;" th:href="@{/signup_employer}"
+                                   onClick="$('#loginbox').hide(); $('#signupbox').show()">
+                                   SIGNUP AS A RECRUITER
+                                </a>
           </div>
           <div class="col-sm">
-            <a href="/register" style="color: #ef6c00; font-weight: bold; font-size: 12px; text-align: center;">SIGNUP AS JOBSEEKER</a>
+            <a style="color: #ef6c00; font-weight: bold; font-size: 12px;" th:href="@{/signup_employer}"
+                                   onClick="$('#loginbox').hide(); $('#signupbox').show()">
+                                   SIGNUP AS JOBSEEKER
+                                </a>
           </div>
         </div>
       </div>

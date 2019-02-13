@@ -1,7 +1,7 @@
 package com.example.jobonics.Validator;
 
 
-import com.example.jobonics.Dto.UserDto;
+import com.example.jobonics.Web.dto.UserDto;
 
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;

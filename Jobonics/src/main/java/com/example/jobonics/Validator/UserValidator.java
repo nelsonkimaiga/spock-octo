@@ -1,6 +1,7 @@
 package com.example.jobonics.Validator;
 
-import com.example.jobonics.Dto.UserDto;
+
+import com.example.jobonics.Web.dto.UserDto;
 import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;
 import org.springframework.validation.Validator;

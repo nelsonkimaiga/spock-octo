@@ -1,6 +1,6 @@
-package com.example.jobonics.security;
+package com.example.jobonics.Security;
 
-import com.example.jobonics.service.LoginAttemptService;
+import com.example.jobonics.Service.LoginAttemptService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationListener;
 import org.springframework.security.authentication.event.AuthenticationSuccessEvent;

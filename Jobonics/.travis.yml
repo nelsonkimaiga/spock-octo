@@ -1,0 +1,13 @@
+
+sudo: false
+
+language: java
+jdk:
+  - oraclejdk8
+
+  
+before_script:  
+  - mysql -u root -e  'CREATE DATABASE jobonicsafrica; '
+  - mysql -u root -e  "CREATE USER 'root'@'localhost' IDENTIFIED BY '303seminarian';"
+  - mysql -u root -e  "GRANT ALL PRIVILEGES ON *.* TO 'root'@'localhost';"
+  - mysql -u root -e  'FLUSH PRIVILEGES;'

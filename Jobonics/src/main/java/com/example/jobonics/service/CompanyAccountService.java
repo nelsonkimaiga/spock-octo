@@ -1,14 +1,14 @@
-package com.example.jobonics.service;
+package com.example.jobonics.Service;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.jobonics.model.CompanyAccount;
-import com.example.jobonics.repository.CompanyAccountRepository;
-import com.example.jobonics.repository.CompanyProfileDetailsRepository;
-import com.example.jobonics.repository.CreateProfileRepository;
+import com.example.jobonics.Persistence.model.CompanyAccount;
+import com.example.jobonics.Persistence.dao.CompanyAccountRepository;
+import com.example.jobonics.Persistence.dao.CompanyProfileDetailsRepository;
+import com.example.jobonics.Persistence.dao.CreateProfileRepository;
 
 @Service
 public class CompanyAccountService {

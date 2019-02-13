@@ -2,12 +2,32 @@
     "configurations": [
         {
             "type": "java",
-            "name": "Spring Boot-JobonicAfrikaApplication<JobonicsAfrica>",
+            "name": "Spring Boot-App<Spring-Full-Security>",
             "request": "launch",
             "cwd": "${workspaceFolder}",
             "console": "internalConsole",
-            "mainClass": "com.example.jobonics.JobonicAfrikaApplication",
+            "mainClass": "com.github.tutorial.App",
+            "projectName": "Spring-Full-Security",
+            "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-App<JobonicsAfrica>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.example.jobonics.App",
             "projectName": "JobonicsAfrica",
+            "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-App<Jobonics>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.example.jobonics.App",
+            "projectName": "Jobonics",
             "args": ""
         }
     ]

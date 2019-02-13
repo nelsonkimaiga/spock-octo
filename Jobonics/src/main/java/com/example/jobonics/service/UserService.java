@@ -1,31 +1,11 @@
-package com.example.jobonics.service;
+package com.example.jobonics.Service;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
-import com.example.jobonics.model.User;
-import com.example.jobonics.repository.UserRepository;
+import com.example.jobonics.Persistence.model.User;
+import com.example.jobonics.Web.dto.UserDto;
 
-@Service("userService")
-public class UserService {
+public interface UserService {
+    User findUserByEmail(String email);
 
-	private UserRepository userRepository;
-
-	@Autowired
-	public UserService(UserRepository userRepository) {
-		this.userRepository = userRepository;
-	}
-	
-	public User findByEmail(String email) {
-		return userRepository.findByEmail(email);
-	}
-	
-	public User findByConfirmationToken(String confirmationToken) {
-		return userRepository.findByConfirmationToken(confirmationToken);
-	}
-	
-	public void saveUser(User user) {
-		userRepository.save(user);
-	}
-
+    void createUserAccount(UserDto user);
 }

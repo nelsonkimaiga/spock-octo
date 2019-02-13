@@ -1,4 +1,4 @@
-package com.example.jobonics.security;
+package com.example.jobonics.Security;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;

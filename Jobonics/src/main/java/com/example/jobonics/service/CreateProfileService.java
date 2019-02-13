@@ -1,12 +1,12 @@
-package com.example.jobonics.service;
+package com.example.jobonics.Service;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.jobonics.model.CreateProfile;
-import com.example.jobonics.repository.CreateProfileRepository;
+import com.example.jobonics.Persistence.model.CreateProfile;
+import com.example.jobonics.Persistence.dao.CreateProfileRepository;
 
 @Service
 public class CreateProfileService {

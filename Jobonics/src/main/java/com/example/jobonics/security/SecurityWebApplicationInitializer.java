@@ -1,7 +1,8 @@
-package com.example.jobonics.security;
+package com.example.jobonics.Security;
 
-import com.example.jobonics.configuration.MvcConfig;
-import com.example.jobonics.monitoring.SessionListenerWithMetrics;
+
+import com.example.jobonics.Spring.MvcConfig;
+import com.example.jobonics.Web.monitoring.SessionListenerWithMetrics;
 import org.springframework.boot.web.servlet.ServletContextInitializer;
 import org.springframework.web.context.request.RequestContextListener;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
@@ -14,6 +15,8 @@ import javax.servlet.SessionTrackingMode;
 import java.util.EnumSet;
 
 public class SecurityWebApplicationInitializer implements ServletContextInitializer {
+
+
     @Override
     public void onStartup(ServletContext servletContext) throws ServletException {
         AnnotationConfigWebApplicationContext rootContext = new AnnotationConfigWebApplicationContext();

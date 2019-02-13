@@ -1,10 +1,8 @@
 package com.example.jobonics.captcha;
 
-import java.net.URI;
-import java.util.regex.Pattern;
 
-import javax.servlet.http.HttpServletRequest;
-
+import com.example.jobonics.Web.error.ReCaptchaInvalidException;
+import com.example.jobonics.Web.error.ReCaptchaUnavailableException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,8 +11,9 @@ import org.springframework.util.StringUtils;
 import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestOperations;
 
-import com.example.jobonics.error.ReCaptchaInvalidException;
-import com.example.jobonics.error.ReCaptchaUnavailableException;
+import javax.servlet.http.HttpServletRequest;
+import java.net.URI;
+import java.util.regex.Pattern;
 
 @Service("captchaService")
 public class CaptchaService implements ICaptchaService {

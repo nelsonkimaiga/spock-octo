@@ -1,10 +1,10 @@
-package com.example.jobonics.service;
+package com.example.jobonics.Service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.jobonics.model.Recruiter;
-import com.example.jobonics.repository.RecruiterRepository;
+import com.example.jobonics.Persistence.model.Recruiter;
+import com.example.jobonics.Persistence.dao.RecruiterRepository;
 
 @Service("recruiterService")
 public class RecruiterService {

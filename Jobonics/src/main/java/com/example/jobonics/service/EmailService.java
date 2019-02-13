@@ -1,4 +1,4 @@
-package com.example.jobonics.service;
+package com.example.jobonics.Service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.SimpleMailMessage;

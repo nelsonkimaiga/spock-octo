@@ -1,12 +1,12 @@
-package com.example.jobonics.service;
+package com.example.jobonics.Service;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.jobonics.model.NewJobs;
-import com.example.jobonics.repository.NewJobsRepository;
+import com.example.jobonics.Persistence.model.NewJobs;
+import com.example.jobonics.Persistence.dao.NewJobsRepository;
 
 @Service("newJobsService")
 public class NewJobsService {

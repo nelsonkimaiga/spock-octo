@@ -1,4 +1,4 @@
-package com.example.jobonics.security;
+package com.example.jobonics.Security;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
