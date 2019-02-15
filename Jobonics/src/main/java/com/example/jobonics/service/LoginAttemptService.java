@@ -1,4 +1,4 @@
-package com.example.jobonics.Service;
+package com.example.jobonics.service;
 
 import com.google.common.cache.CacheBuilder;
 import com.google.common.cache.CacheLoader;

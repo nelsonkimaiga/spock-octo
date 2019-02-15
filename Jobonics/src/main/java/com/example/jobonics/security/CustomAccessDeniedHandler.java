@@ -1,4 +1,4 @@
-package com.example.jobonics.Security;
+package com.example.jobonics.security;
 
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.security.core.Authentication;

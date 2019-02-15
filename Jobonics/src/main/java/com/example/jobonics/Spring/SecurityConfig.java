@@ -1,8 +1,6 @@
 package com.example.jobonics.Spring;
 
 
-import com.example.jobonics.Security.CustomAccessDeniedHandler;
-import com.example.jobonics.Security.CustomLogoutSuccessHandler;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -25,6 +23,9 @@ import org.springframework.security.web.authentication.logout.LogoutSuccessHandl
 import org.springframework.security.web.authentication.rememberme.JdbcTokenRepositoryImpl;
 import org.springframework.security.web.authentication.rememberme.PersistentTokenRepository;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
+
+import com.example.jobonics.security.CustomAccessDeniedHandler;
+import com.example.jobonics.security.CustomLogoutSuccessHandler;
 
 import javax.servlet.http.HttpServletResponse;
 import javax.sql.DataSource;

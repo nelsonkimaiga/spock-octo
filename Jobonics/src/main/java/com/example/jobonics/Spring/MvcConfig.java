@@ -1,7 +1,7 @@
 package com.example.jobonics.Spring;
 
-import com.example.jobonics.Security.MySimpleUrlAuthenticationSuccessHandler;
-import com.example.jobonics.Security.SecurityWebApplicationInitializer;
+import java.util.Locale;
+
 import org.springframework.boot.web.servlet.ServletContextInitializer;
 import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
@@ -14,12 +14,17 @@ import org.springframework.security.web.authentication.AuthenticationSuccessHand
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.web.servlet.LocaleResolver;
 import org.springframework.web.servlet.ViewResolver;
-import org.springframework.web.servlet.config.annotation.*;
+import org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer;
+import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
+import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.springframework.web.servlet.i18n.CookieLocaleResolver;
 import org.springframework.web.servlet.i18n.LocaleChangeInterceptor;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
-import java.util.Locale;
+import com.example.jobonics.security.MySimpleUrlAuthenticationSuccessHandler;
+import com.example.jobonics.security.SecurityWebApplicationInitializer;
 
 
 @Configuration
@@ -49,6 +54,9 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
         registry.addViewController("/signup_employer").setViewName("recruiter_signup");
         registry.addViewController("/login").setViewName("login_recruiter");
         registry.addViewController("/Admin").setViewName("recruiter_dashboard");
+       // registry.addViewController("/new_job").setViewName("new_job");
+        
+        
         registry.addViewController("/create_profile").setViewName("recruiter_create_profile");
         registry.addViewController("/company_profile").setViewName("company_profile");
         registry.addViewController("/invalidSession").setViewName("invalidSession");

@@ -14,7 +14,7 @@ import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.example.jobonics.Persistence.model.CreateProfile;
-import com.example.jobonics.Service.CreateProfileService;
+import com.example.jobonics.service.CreateProfileService;
 
 
 

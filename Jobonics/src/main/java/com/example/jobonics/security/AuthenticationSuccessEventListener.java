@@ -1,12 +1,13 @@
-package com.example.jobonics.Security;
+package com.example.jobonics.security;
 
-import com.example.jobonics.Service.LoginAttemptService;
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationListener;
 import org.springframework.security.authentication.event.AuthenticationSuccessEvent;
 import org.springframework.stereotype.Component;
 
-import javax.servlet.http.HttpServletRequest;
+import com.example.jobonics.service.LoginAttemptService;
 
 @Component
 public class AuthenticationSuccessEventListener implements ApplicationListener<AuthenticationSuccessEvent> {

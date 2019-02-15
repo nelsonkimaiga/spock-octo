@@ -1,9 +1,8 @@
 package com.example.jobonics.Web.Controller;
 
-import com.example.jobonics.Persistence.model.User;
-import com.example.jobonics.Service.UserService;
-import com.example.jobonics.Web.dto.UserDto;
-import com.example.jobonics.captcha.ICaptchaService;
+import javax.servlet.http.HttpServletRequest;
+import javax.validation.Valid;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,8 +12,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.validation.Valid;
+import com.example.jobonics.Persistence.model.User;
+import com.example.jobonics.Web.dto.UserDto;
+import com.example.jobonics.captcha.ICaptchaService;
+import com.example.jobonics.service.UserService;
 
 
 @Controller

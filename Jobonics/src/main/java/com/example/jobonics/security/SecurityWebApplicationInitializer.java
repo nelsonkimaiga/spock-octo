@@ -1,4 +1,4 @@
-package com.example.jobonics.Security;
+package com.example.jobonics.security;
 
 
 import com.example.jobonics.Spring.MvcConfig;

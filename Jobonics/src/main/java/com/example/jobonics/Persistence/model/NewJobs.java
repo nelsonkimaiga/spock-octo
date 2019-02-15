@@ -21,6 +21,11 @@ public class NewJobs {
 	public NewJobs() {
 	}
 
+	@Column(name = "Employer")
+	//@NotEmpty(message = "Please provide the job title")
+	private String Employer;
+	
+	
 	@Column(name = "JobTitle")
 	@NotEmpty(message = "Please provide the job title")
 	private String jobTitle;

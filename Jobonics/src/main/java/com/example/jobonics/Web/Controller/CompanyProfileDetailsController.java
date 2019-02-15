@@ -1,7 +1,5 @@
 package com.example.jobonics.Web.Controller;
 
-import java.util.List;
-
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,12 +8,10 @@ import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.example.jobonics.Persistence.model.CompanyProfileDetails;
-import com.example.jobonics.Service.CompanyProfileDetailsService;
-import com.example.jobonics.Service.CreateProfileService;
+import com.example.jobonics.service.CompanyProfileDetailsService;
 
 @Controller
 

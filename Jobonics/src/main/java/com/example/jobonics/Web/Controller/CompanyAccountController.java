@@ -14,9 +14,7 @@ import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.example.jobonics.Persistence.model.CompanyAccount;
-import com.example.jobonics.Service.CompanyAccountService;
-import com.example.jobonics.Service.CompanyProfileDetailsService;
-import com.example.jobonics.Service.CreateProfileService;
+import com.example.jobonics.service.CompanyAccountService;
 
 @Controller
 
